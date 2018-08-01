@@ -14,7 +14,7 @@ windows:
         -
         - ember serve
         - vue:
-          - cd modules
+          - cd dashboard
           - yarn dev
 
   - backend:

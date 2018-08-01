@@ -54,8 +54,7 @@
     scrollbar_position = hidden
     use_system_font = False
     login_shell = True
-    background_darkness = 0.83
-    background_type = transparent
+    background_darkness = 1.03
     background_image = None
     use_custom_command = True
     exit_action = restart

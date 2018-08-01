@@ -1,7 +1,7 @@
 export ZSH=/home/bonflintstone/.oh-my-zsh
 export LANG=en_US.UTF-8
 export ZSH_THEME="robbyrussell"
-plugins=(git rails ruby node react-native)
+plugins=(git rails ruby node react-native rvm)
 
 export ANDROID_SDK_ROOT=${HOME}/.android/sdk
 export ANDROID_HOME=${ANDROID_SDK_ROOT}
@@ -26,6 +26,8 @@ alias pa="qpdfview **/*pdf"
 alias ggpush='git push origin $(git_current_branch) --tags'
 alias ggpull='git pull origin $(git_current_branch) --tags'
 alias update='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade && sudo apt-get autoclean && sudo apt-get autoremove'
+
+export RAILSLOVE_KNIFE_USER='freddybonfanti'
 
 # Fixes that should not be
 function sdp_dokku {

@@ -13,3 +13,6 @@
 !.config/terminator/
 !.config/terminator/*
 !.global-gitignore
+!.taskbook/
+!.taskbook/**/*
+!.taskbook.json

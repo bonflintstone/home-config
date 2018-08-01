@@ -1,0 +1,12 @@
+# ~/.tmuxinator/dev.yml
+
+name: dev
+root: <%= @settings[:dir] || `pwd` %>
+
+windows:
+  - editor:
+      layout: 1b91,187x60,0,0[187x50,0,0,0,187x9,0,51{143x9,0,51,2,43x9,144,51,3}]
+      panes:
+        - vim
+        -
+        - mix phx.server
