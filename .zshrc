@@ -1,4 +1,4 @@
-export ZSH=/home/bonflintstone/.oh-my-zsh
+export ZSH=${HOME}/.oh-my-zsh
 export LANG=en_US.UTF-8
 export ZSH_THEME="robbyrussell"
 plugins=(git rails ruby node react-native rvm)
@@ -6,7 +6,7 @@ plugins=(git rails ruby node react-native rvm)
 export ANDROID_SDK_ROOT=${HOME}/.android/sdk
 export ANDROID_HOME=${ANDROID_SDK_ROOT}
 
-export PATH=${PATH}:"/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/bonflintstone/.rvm/bin:/home/bonflintstone/.rvm/bin:/home/bonflinstone/.phantomjs/bin"
+export PATH=${PATH}:"/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:${HOME}/.rvm/bin:${HOME}.rvm/bin:${HOME}.phantomjs/bin"
 export PATH=${PATH}:${ANDROID_SDK_ROOT}/tools
 export PATH=${PATH}:${ANDROID_SDK_ROOT}/platform-tools
 export PATH=${PATH}:${HOME}/.yarn/bin
