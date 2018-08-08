@@ -16,3 +16,6 @@
 !.taskbook/
 !.taskbook/**/*
 !.taskbook.json
+!.hyper.js
+!.hyper_plugins
+!.hyper_plugins/**/*
