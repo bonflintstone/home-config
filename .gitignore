@@ -19,3 +19,8 @@
 !.hyper.js
 !.hyper_plugins
 !.hyper_plugins/**/*
+
+!Uni
+!Uni/**/*
+!Vpns
+!Vpns/**/*
