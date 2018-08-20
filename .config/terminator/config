@@ -59,7 +59,7 @@
     use_custom_command = True
     exit_action = restart
     custom_command = tmux attach
-    font = Monospace 14
+    font = Menlo 14
     scrollback_infinite = True
 [layouts]
   [[default]]

@@ -74,5 +74,31 @@
             "My Board"
         ],
         "_isTask": false
+    },
+    "7": {
+        "_id": 7,
+        "_date": "Wed Aug 08 2018",
+        "_timestamp": 1533755253058,
+        "description": "manage numbat",
+        "isStarred": true,
+        "boards": [
+            "@railslove"
+        ],
+        "_isTask": true,
+        "isComplete": false,
+        "priority": 1
+    },
+    "8": {
+        "_id": 8,
+        "_date": "Thu Aug 16 2018",
+        "_timestamp": 1534410961200,
+        "description": "Add size dimension to tag chart",
+        "isStarred": false,
+        "boards": [
+            "@railslove"
+        ],
+        "_isTask": true,
+        "isComplete": false,
+        "priority": 1
     }
 }
