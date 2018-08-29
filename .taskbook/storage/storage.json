@@ -14,9 +14,9 @@
     },
     "3": {
         "_id": 3,
-        "_date": "Thu Aug 16 2018",
-        "_timestamp": 1534410948030,
-        "description": "Fix first item in chart selector not being auto filled",
+        "_date": "Tue Aug 28 2018",
+        "_timestamp": 1535433495551,
+        "description": "Filter for TagCountChart?",
         "isStarred": false,
         "boards": [
             "@railslove"
@@ -27,9 +27,22 @@
     },
     "4": {
         "_id": 4,
-        "_date": "Mon Aug 20 2018",
-        "_timestamp": 1534744781915,
-        "description": "tags-missing should be tags last seen",
+        "_date": "Tue Aug 28 2018",
+        "_timestamp": 1535433525905,
+        "description": "LastSeenTags Single date why?",
+        "isStarred": false,
+        "boards": [
+            "@railslove"
+        ],
+        "_isTask": true,
+        "isComplete": true,
+        "priority": 1
+    },
+    "9": {
+        "_id": 9,
+        "_date": "Tue Aug 28 2018",
+        "_timestamp": 1535440047234,
+        "description": "Add labels to tagCountCHart",
         "isStarred": false,
         "boards": [
             "@railslove"
@@ -38,66 +51,144 @@
         "isComplete": false,
         "priority": 1
     },
-    "5": {
-        "_id": 5,
-        "_date": "Mon Aug 20 2018",
-        "_timestamp": 1534747586207,
-        "description": "Push all git repos",
+    "10": {
+        "_id": 10,
+        "_date": "Tue Aug 28 2018",
+        "_timestamp": 1535440058757,
+        "description": "Make labels not emphasis on tagHistoryChart",
         "isStarred": false,
         "boards": [
-            "@migrate"
-        ],
-        "_isTask": true,
-        "isComplete": true,
-        "priority": 1
-    },
-    "6": {
-        "_id": 6,
-        "_date": "Mon Aug 20 2018",
-        "_timestamp": 1534747596153,
-        "description": "Check for documents",
-        "isStarred": false,
-        "boards": [
-            "@migrate"
+            "@railslove"
         ],
         "_isTask": true,
         "isComplete": false,
         "priority": 1
     },
-    "7": {
-        "_id": 7,
-        "_date": "Mon Aug 20 2018",
-        "_timestamp": 1534747600582,
-        "description": "Backup ssh keys",
+    "11": {
+        "_id": 11,
+        "_date": "Tue Aug 28 2018",
+        "_timestamp": 1535445398203,
+        "description": "Tag select for chart are not styled correctly (too short)",
         "isStarred": false,
         "boards": [
-            "@migrate"
+            "@railslove"
         ],
         "_isTask": true,
         "isComplete": false,
         "priority": 1
     },
-    "8": {
-        "_id": 8,
-        "_date": "Mon Aug 20 2018",
-        "_timestamp": 1534747639970,
-        "description": "Make list of github repos cloned",
+    "12": {
+        "_id": 12,
+        "_date": "Tue Aug 28 2018",
+        "_timestamp": 1535445529150,
+        "description": "Changing the filter does not seem to reset the charts",
         "isStarred": false,
         "boards": [
-            "@migrate"
+            "@railslove"
         ],
         "_isTask": true,
         "isComplete": true,
         "priority": 1
     },
-    "9": {
-        "_id": 9,
-        "_date": "Mon Aug 20 2018",
-        "_timestamp": 1534748569052,
-        "description": "acid-green beraten-aus-daten bonbrandt bonfant-architekten chef chef-railslove coding coffee fintechweekly fintechweekly-app natur numbat-server numbat-webapp sdp-radar-app social-magazine start-up-city-cologne",
+    "13": {
+        "_id": 13,
+        "_date": "Tue Aug 28 2018",
+        "_timestamp": 1535446395912,
+        "description": "Makde sure store version updating works properly",
         "isStarred": false,
         "boards": [
-            "@repos"
+            "@railslove"
+        ],
+        "_isTask": true,
+        "isComplete": false,
+        "priority": 1
+    },
+    "14": {
+        "_id": 14,
+        "_date": "Tue Aug 28 2018",
+        "_timestamp": 1535451130530,
+        "description": "changing chart selection in VehicleChartSelector should change the global state right away",
+        "isStarred": false,
+        "boards": [
+            "@railslove"
+        ],
+        "_isTask": true,
+        "isComplete": false,
+        "priority": 1
+    },
+    "15": {
+        "_id": 15,
+        "_date": "Tue Aug 28 2018",
+        "_timestamp": 1535451848244,
+        "description": "make queries more efficient, especially tagChart",
+        "isStarred": false,
+        "boards": [
+            "@railslove"
+        ],
+        "_isTask": true,
+        "isComplete": true,
+        "priority": 1
+    },
+    "16": {
+        "_id": 16,
+        "_date": "Tue Aug 28 2018",
+        "_timestamp": 1535453124435,
+        "description": "fix tag charts query to work with attachment id",
+        "isStarred": false,
+        "boards": [
+            "@railslove"
+        ],
+        "_isTask": true,
+        "isComplete": true,
+        "priority": 1
+    },
+    "17": {
+        "_id": 17,
+        "_date": "Wed Aug 29 2018",
+        "_timestamp": 1535507913075,
+        "description": "Fix headline styling",
+        "isStarred": false,
+        "boards": [
+            "@railslove"
+        ],
+        "_isTask": true,
+        "isComplete": false,
+        "priority": 1
+    },
+    "18": {
+        "_id": 18,
+        "_date": "Wed Aug 29 2018",
+        "_timestamp": 1535515695217,
+        "description": "Remove decomissioned tags from results\n",
+        "isStarred": false,
+        "boards": [
+            "@railslove"
+        ],
+        "_isTask": true,
+        "isComplete": true,
+        "priority": 1
+    },
+    "19": {
+        "_id": 19,
+        "_date": "Wed Aug 29 2018",
+        "_timestamp": 1535525765620,
+        "description": "refactor tag charts controller",
+        "isStarred": false,
+        "boards": [
+            "@railslove"
+        ],
+        "_isTask": true,
+        "isComplete": false,
+        "priority": 1
+    },
+    "20": {
+        "_id": 20,
+        "_date": "Wed Aug 29 2018",
+        "_timestamp": 1535526887231,
+        "description": "refactor vehicles to chartCandidates in backend",
+        "isStarred": false,
+        "boards": [
+            "@railslove"
         ],
         "_isTask": true,
         "isComplete": false,

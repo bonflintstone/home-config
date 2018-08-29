@@ -17,12 +17,12 @@ export EDITOR='vim'
 source ~/.bin/tmuxinator.zsh
 
 alias dokku="$HOME/.dokku/contrib/dokku_client.sh"
-alias mux="rvm 2.3.5 do tmuxinator"
+alias mux="rvm 2.5.1 do tmuxinator"
 alias toclip="tmux show-buffer | clipcopy"
 alias gall="git add --all :/"
 alias o="xdg-open"
-alias p="qpdfview"
-alias pa="qpdfview **/*pdf"
+function p { nohup okular $1 > /dev/null & }
+alias pa="nohup okular **/*pdf > /dev/null &"
 alias ggpush='git push origin $(git_current_branch) --tags'
 alias ggpull='git pull origin $(git_current_branch) --tags'
 alias update='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade && sudo apt-get autoclean && sudo apt-get autoremove'
@@ -31,7 +31,7 @@ export RAILSLOVE_KNIFE_USER='freddybonfanti'
 
 # Fixes that should not be
 function sdp_dokku {
-  (cd ~ && DOKKU_PORT=2222 DOKKU_HOST=sdp-web dokku "$1 web ${@:2}")
+  (cd && DOKKU_PORT=2222 DOKKU_HOST=sdp-web dokku "$1 web ${@:2}")
 }
 
 export NVM_DIR="$HOME/.nvm"
@@ -40,5 +40,7 @@ export NVM_DIR="$HOME/.nvm"
 
 stty -ixon
 
+# So it works for non login shells
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"

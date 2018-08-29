@@ -56,3 +56,5 @@ au BufNewFile,BufRead *.java set noexpandtab
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn|node_modules)$',
   \ }
+
+let g:ale_enabled = 0

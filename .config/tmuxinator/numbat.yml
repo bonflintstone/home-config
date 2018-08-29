@@ -2,12 +2,13 @@
 
 name: numbat
 
-pre_window: rvm use 2.2
-pre_window: nvm use 9.2
+pre_window:
+  - nvm use 8.11.4
+  - rvm use 2.2
 
 windows:
   - frontend:
-      layout: 9d7b,187x60,0,0[187x50,0,0,18,187x9,0,51{143x9,0,51,19,21x9,144,51,20,21x9,166,51,21}]
+      layout: '690a,166x53,0,0[166x43,0,0,2,166x9,0,44{103x9,0,44,6,31x9,104,44,7,30x9,136,44,8}]'
       root: ~/Documents/numbat-webapp
       panes:
         - vim
@@ -18,7 +19,7 @@ windows:
           - yarn dev
 
   - backend:
-      layout: 9d7b,187x60,0,0[187x50,0,0,18,187x9,0,51{143x9,0,51,19,21x9,144,51,20,21x9,166,51,21}]
+      layout: '690a,166x53,0,0[166x43,0,0,2,166x9,0,44{103x9,0,44,6,31x9,104,44,7,30x9,136,44,8}]'
       root: ~/Documents/numbat-server
       panes:
         - vim
@@ -26,4 +27,4 @@ windows:
         - rs
         - vpn:
           - cd ~/Vpns
-          - sudo openvpn ./RACKSPACE_RLOVE.ovpn
+          - sudo openvpn RACKSPACE_RLOVE.ovpn
