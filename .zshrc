@@ -1,6 +1,6 @@
 export ZSH=${HOME}/.oh-my-zsh
 export LANG=en_US.UTF-8
-export ZSH_THEME="robbyrussell"
+export ZSH_THEME="alanpeabody"
 plugins=(git rails ruby node react-native rvm)
 
 source $ZSH/oh-my-zsh.sh
