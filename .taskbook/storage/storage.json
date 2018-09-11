@@ -19,7 +19,7 @@
         "description": "Filter for TagCountChart?",
         "isStarred": false,
         "boards": [
-            "@railslove"
+            "@numbat-next"
         ],
         "_isTask": true,
         "isComplete": false,
@@ -45,10 +45,10 @@
         "description": "Add labels to tagCountCHart",
         "isStarred": false,
         "boards": [
-            "@railslove"
+            "@numbat-prio"
         ],
         "_isTask": true,
-        "isComplete": false,
+        "isComplete": true,
         "priority": 1
     },
     "10": {
@@ -58,10 +58,10 @@
         "description": "Make labels not emphasis on tagHistoryChart",
         "isStarred": false,
         "boards": [
-            "@railslove"
+            "@numbat-prio"
         ],
         "_isTask": true,
-        "isComplete": false,
+        "isComplete": true,
         "priority": 1
     },
     "11": {
@@ -71,10 +71,10 @@
         "description": "Tag select for chart are not styled correctly (too short)",
         "isStarred": false,
         "boards": [
-            "@railslove"
+            "@numbat-prio"
         ],
         "_isTask": true,
-        "isComplete": false,
+        "isComplete": true,
         "priority": 1
     },
     "12": {
@@ -97,10 +97,10 @@
         "description": "Makde sure store version updating works properly",
         "isStarred": false,
         "boards": [
-            "@railslove"
+            "@numbat-prio"
         ],
         "_isTask": true,
-        "isComplete": false,
+        "isComplete": true,
         "priority": 1
     },
     "14": {
@@ -110,10 +110,10 @@
         "description": "changing chart selection in VehicleChartSelector should change the global state right away",
         "isStarred": false,
         "boards": [
-            "@railslove"
+            "@numbat-prio"
         ],
         "_isTask": true,
-        "isComplete": false,
+        "isComplete": true,
         "priority": 1
     },
     "15": {
@@ -149,10 +149,10 @@
         "description": "Fix headline styling",
         "isStarred": false,
         "boards": [
-            "@railslove"
+            "@numbat-prio"
         ],
         "_isTask": true,
-        "isComplete": false,
+        "isComplete": true,
         "priority": 1
     },
     "18": {
@@ -175,10 +175,10 @@
         "description": "refactor tag charts controller",
         "isStarred": false,
         "boards": [
-            "@railslove"
+            "@numbat-prio"
         ],
         "_isTask": true,
-        "isComplete": false,
+        "isComplete": true,
         "priority": 1
     },
     "20": {
@@ -188,7 +188,59 @@
         "description": "refactor vehicles to chartCandidates in backend",
         "isStarred": false,
         "boards": [
-            "@railslove"
+            "@numbat-prio"
+        ],
+        "_isTask": true,
+        "isComplete": false,
+        "priority": 1
+    },
+    "21": {
+        "_id": 21,
+        "_date": "Mon Sep 03 2018",
+        "_timestamp": 1535956971908,
+        "description": "Changing dashboard version should update right away",
+        "isStarred": false,
+        "boards": [
+            "@numbat-prio"
+        ],
+        "_isTask": true,
+        "isComplete": true,
+        "priority": 1
+    },
+    "22": {
+        "_id": 22,
+        "_date": "Mon Sep 03 2018",
+        "_timestamp": 1535960040900,
+        "description": "Fix scaling issue with tag count chart\n",
+        "isStarred": false,
+        "boards": [
+            "@numbat-prio"
+        ],
+        "_isTask": true,
+        "isComplete": true,
+        "priority": 1
+    },
+    "23": {
+        "_id": 23,
+        "_date": "Wed Sep 05 2018",
+        "_timestamp": 1536134833770,
+        "description": "fix get self issue",
+        "isStarred": false,
+        "boards": [
+            "@numbat-prio"
+        ],
+        "_isTask": true,
+        "isComplete": false,
+        "priority": 1
+    },
+    "24": {
+        "_id": 24,
+        "_date": "Wed Sep 05 2018",
+        "_timestamp": 1536137284585,
+        "description": "Make tag count bars 100% wide",
+        "isStarred": false,
+        "boards": [
+            "@numbat-prio"
         ],
         "_isTask": true,
         "isComplete": false,

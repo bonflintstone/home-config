@@ -13,9 +13,6 @@
 !.config/terminator/
 !.config/terminator/*
 !.global-gitignore
-!.hyper.js
-!.hyper_plugins
-!.hyper_plugins/**/*
 
 !Vpns
 !Vpns/**/*
