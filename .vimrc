@@ -47,6 +47,7 @@ nnoremap <leader>v :vsp
 nnoremap <leader>t :tabe
 nnoremap <leader>r :syntax sync minlines=2000
 nnoremap <leader>n :noh
+nnoremap <leader>b :term tb
 
 au BufNewFile,BufRead *.jbuilder set ft=ruby
 au BufNewFile,BufRead *Thorfile set ft=ruby
