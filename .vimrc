@@ -4,22 +4,27 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'w0rp/ale'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'tpope/vim-haml'
-Plugin 'tpope/vim-fugitive'
-Plugin 'jonathanfilip/vim-lucius'
+
+" Syntax
 Plugin 'slim-template/vim-slim.git'
 Plugin 'posva/vim-vue'
 Plugin 'wavded/vim-stylus'
 Plugin 'slime-lang/vim-slime-syntax'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-haml'
 Plugin 'isRuslan/vim-es6'
-Plugin 'ctrlpvim/ctrlp.vim'
+
+" Essential
+Plugin 'ctrlpvim/ctrlp.vim' " fuzzy finder
+Plugin 'w0rp/ale' " linter
+Plugin 'tpope/vim-fugitive' " git
+
+" Experimental
+Plugin 'airblade/vim-gitgutter' " git sidebar
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-surround'
 call vundle#end()
 filetype plugin indent on
 
@@ -58,3 +63,5 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 let g:ale_enabled = 0
+
+map <C-n> :NERDTreeToggle<CR>
