@@ -13,9 +13,4 @@
 !.config/terminator/
 !.config/terminator/*
 !.global-gitignore
-
-!Vpns
-!Vpns/**/*
-!Documents
-!Documents/coding
-!Documents/coding/**/*
+!.rvmrc

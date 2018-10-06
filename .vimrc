@@ -14,6 +14,7 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-haml'
 Plugin 'isRuslan/vim-es6'
+Plugin 'zah/nim.vim'
 
 " Essential
 Plugin 'ctrlpvim/ctrlp.vim' " fuzzy finder
@@ -22,7 +23,6 @@ Plugin 'tpope/vim-fugitive' " git
 
 " Experimental
 Plugin 'airblade/vim-gitgutter' " git sidebar
-Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-surround'
 call vundle#end()
@@ -47,7 +47,7 @@ nnoremap <leader>v :vsp
 nnoremap <leader>t :tabe
 nnoremap <leader>r :syntax sync minlines=2000
 nnoremap <leader>n :noh
-nnoremap <leader>b :term tb
+nnoremap <leader>b :term ++curwin tb
 
 au BufNewFile,BufRead *.jbuilder set ft=ruby
 au BufNewFile,BufRead *Thorfile set ft=ruby

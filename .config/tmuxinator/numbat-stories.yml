@@ -1,0 +1,27 @@
+# ~/.tmuxinator/dev.yml
+
+name: numbat
+
+pre_window:
+  - nvm use 8.11.4
+  - rvm use 2.2
+
+windows:
+  - frontend:
+      layout: '8ab7,166x53,0,0[166x40,0,0,10,166x12,0,41{120x12,0,41,11,45x12,121,41,12}]'
+      root: ~/Documents/numbat-webapp/dashboard
+      panes:
+        - vim
+        -
+        - yarn storybook
+
+  - backend:
+      layout: '690a,166x53,0,0[166x43,0,0,2,166x9,0,44{103x9,0,44,6,31x9,104,44,7,30x9,136,44,8}]'
+      root: ~/Documents/numbat-server
+      panes:
+        - vim
+        -
+        - rs
+        - vpn:
+          - cd ~/Vpns
+          - sudo openvpn RACKSPACE_RLOVE.ovpn
