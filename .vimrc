@@ -14,17 +14,19 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-haml'
 Plugin 'isRuslan/vim-es6'
+Plugin 'zah/nim.vim'
 
 " Essential
 Plugin 'ctrlpvim/ctrlp.vim' " fuzzy finder
 Plugin 'w0rp/ale' " linter
 Plugin 'tpope/vim-fugitive' " git
+Plugin 'airblade/vim-gitgutter' " git sidebar
 
 " Experimental
-Plugin 'airblade/vim-gitgutter' " git sidebar
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-eunuch' " File command, renaming, deleting, etc
 Plugin 'tpope/vim-surround'
+Plugin 'zxqfl/tabnine-vim'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -34,6 +36,8 @@ set noswapfile
 syntax on
 colo slate
 highlight Search cterm=underline
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
 
 " for ctrlp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zi,*/node_modules/*,*/bower_components/*,*.class
@@ -47,7 +51,7 @@ nnoremap <leader>v :vsp
 nnoremap <leader>t :tabe
 nnoremap <leader>r :syntax sync minlines=2000
 nnoremap <leader>n :noh
-nnoremap <leader>b :term tb
+nnoremap <leader>b :term ++curwin tb
 
 au BufNewFile,BufRead *.jbuilder set ft=ruby
 au BufNewFile,BufRead *Thorfile set ft=ruby
@@ -59,8 +63,9 @@ au BufNewFile,BufRead *.hbs set ft=html
 au BufNewFile,BufRead *.babelrc set ft=javascript
 au BufNewFile,BufRead *.java set noexpandtab
 
+let g:ctrlp_working_path_mode = ''
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn|node_modules)$',
+  \ 'dir':  '\v(git|hg|svn|node_modules|bower_components|tmp)$',
   \ }
 
 let g:ale_enabled = 0
