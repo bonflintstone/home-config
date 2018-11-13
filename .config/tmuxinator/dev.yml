@@ -1,16 +1,18 @@
 # ~/.tmuxinator/dev.yml
 
 name: dev
-root: <%= @settings[:dir] || `pwd` %>
+root: <%= @args[0] || `pwd` %>
 
 pre_window:
   - if [ -e '.ruby-version' ]; then; rvm use $(cat .ruby-version); fi
+  - tmux select-layout '032f,166x53,0,0[166x40,0,0,1,166x12,0,41{80x12,0,41,4,28x12,81,41,7,28x12,110,41,12,27x12,139,41,10}]'
   - clear
 
 windows:
   - editor:
-      layout: 1b91,187x60,0,0[187x50,0,0,0,187x9,0,51{143x9,0,51,2,43x9,144,51,3}]
       panes:
         - vim
+        -
+        -
         -
         -

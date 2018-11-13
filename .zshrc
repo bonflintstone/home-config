@@ -22,8 +22,8 @@ alias mux="rvm 2.5.1 do tmuxinator"
 alias toclip="tmux show-buffer | clipcopy"
 alias gall="git add --all :/"
 alias o="xdg-open"
-function p { nohup okular $1 > /dev/null }
-function pa { nohup okular $1**/*pdf > /dev/null }
+function p { nohup okular $1 > /dev/null & }
+function pa { nohup okular $1**/*pdf > /dev/null & }
 alias ggpush='git push origin $(git_current_branch) --tags'
 alias ggpull='git pull origin $(git_current_branch) --tags'
 alias update='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade && sudo apt-get autoclean && sudo apt-get autoremove'

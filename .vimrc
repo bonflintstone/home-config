@@ -20,11 +20,13 @@ Plugin 'zah/nim.vim'
 Plugin 'ctrlpvim/ctrlp.vim' " fuzzy finder
 Plugin 'w0rp/ale' " linter
 Plugin 'tpope/vim-fugitive' " git
+Plugin 'airblade/vim-gitgutter' " git sidebar
 
 " Experimental
-Plugin 'airblade/vim-gitgutter' " git sidebar
-Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-eunuch' " File command, renaming, deleting, etc
 Plugin 'tpope/vim-surround'
+Plugin 'zxqfl/tabnine-vim'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -34,6 +36,8 @@ set noswapfile
 syntax on
 colo slate
 highlight Search cterm=underline
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
 
 " for ctrlp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zi,*/node_modules/*,*/bower_components/*,*.class
@@ -59,8 +63,9 @@ au BufNewFile,BufRead *.hbs set ft=html
 au BufNewFile,BufRead *.babelrc set ft=javascript
 au BufNewFile,BufRead *.java set noexpandtab
 
+let g:ctrlp_working_path_mode = ''
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn|node_modules)$',
+  \ 'dir':  '\v(git|hg|svn|node_modules|bower_components|tmp)$',
   \ }
 
 let g:ale_enabled = 0
