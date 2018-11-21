@@ -1,16 +1,15 @@
 AllCops:
-  Include:
-    - Rakefile
-    - config.ru
   Exclude:
-    - db/schema.rb
+    - db/**/*
     - features/**/*
     - db/**/*
     - spec/factories/**/*
 LineLength:
-  Max: 120
+  Max: 100
   Enabled: true
 StringLiterals:
   Enabled: false
 Documentation:
   Enabled: false
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact

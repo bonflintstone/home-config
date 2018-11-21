@@ -8,9 +8,11 @@
 !.gitignore
 !.config
 .config/*
+!.config/notifyosd.zsh
 !.config/tmuxinator/
 !.config/tmuxinator/*
 !.config/terminator/
 !.config/terminator/*
+!.config/libinput-gestures.conf
 !.global-gitignore
 !.rvmrc

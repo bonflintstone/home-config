@@ -1,10 +1,25 @@
 name: numbat
 
 pre_window:
-  - nvm use 9.11.2
+  - nvm use 8.11.4
   - rvm use 2.2
   - <%= @args.include?('local') && 'export LOCAL_DB=true' %>
+  - >
+    upload() {
+      export OLD_PWD=$(pwd)
+      cd ~/Documents/numbat-server
+      export GIT_HASH=$(git rev-parse --verify --quiet HEAD | cut -c1-9)
+      export FILE_NAME="numbat-server-HEAD-mri-${GIT_HASH}.zip"
+      scp releases/$FILE_NAME deploy@10.181.196.23:$FILE_NAME
 
+      cd ~/Documents/numbat-webapp
+      export GIT_HASH=$(git rev-parse --verify --quiet HEAD | cut -c1-7)
+      export FILE_NAME="numbat-webapp-HEAD-${GIT_HASH}.zip"
+      scp releases/$FILE_NAME deploy@10.181.196.23:$FILE_NAME
+
+      cd $OLD_PWD
+    }
+  - clear
 windows:
   - frontend:
       root: ~/Documents/numbat-webapp/dashboard

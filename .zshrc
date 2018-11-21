@@ -17,6 +17,8 @@ export EDITOR='vim'
 
 source ~/.bin/tmuxinator.zsh
 
+source ~/.config/notifyosd.zsh
+
 alias dokku="$HOME/.dokku/contrib/dokku_client.sh"
 alias mux="rvm 2.5.1 do tmuxinator"
 alias toclip="tmux show-buffer | clipcopy"
