@@ -11,13 +11,15 @@ export PATH=${PATH}:${ANDROID_SDK_ROOT}/tools
 export PATH=${PATH}:${ANDROID_SDK_ROOT}/platform-tools
 export PATH=${PATH}:${HOME}/.yarn/bin
 export PATH=${PATH}:${HOME}/.nimble/bin
+export PATH=${PATH}:${HOME}/.cargo/bin
 
 source $ZSH/oh-my-zsh.sh
 export EDITOR='vim'
 
 source ~/.bin/tmuxinator.zsh
 
-source ~/.config/notifyosd.zsh
+source ~/.scripts/notify.sh
+source ~/.scripts/numbat-deploy.sh
 
 alias dokku="$HOME/.dokku/contrib/dokku_client.sh"
 alias mux="rvm 2.5.1 do tmuxinator"

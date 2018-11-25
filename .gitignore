@@ -6,9 +6,10 @@
 !.vimrc
 !.zshrc
 !.gitignore
+!.scripts
+!.scripts/*
 !.config
 .config/*
-!.config/notifyosd.zsh
 !.config/tmuxinator/
 !.config/tmuxinator/*
 !.config/terminator/

@@ -36,7 +36,6 @@ set noswapfile
 syntax on
 colo slate
 highlight Search cterm=underline
-let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 
 " for ctrlp
