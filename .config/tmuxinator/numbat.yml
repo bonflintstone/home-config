@@ -3,7 +3,7 @@ name: numbat
 pre_window:
   - nvm use 8.11.4
   - rvm use 2.3.7
-  - <%= @args.include?('local') && 'export LOCAL_DB=true' %>
+  - <%= @args.include?('local') && 'set -g LOCAL_DB true' %>
   - clear
 windows:
   - frontend:
@@ -25,7 +25,7 @@ windows:
         - vim
         -
         - docker start mssql
-        - rs
+        - rails s
         - vpn:
           - cd ~/Vpns
           - sudo openvpn RACKSPACE_RLOVE.ovpn

@@ -1,5 +1,6 @@
 # commands to ignore
-cmdignore=(htop tmux top vim ssh tail rs rc openvpn 'yarn dev' 'ember serve' 'yarn storybook' 'mux edit')
+cmdignore=(htop tmux top vim ssh tail rs node rc openvpn \'yarn dev\' \
+  \'ember serve\' \'yarn storybook\' \'mux edit\')
 
 # set gt 0 to enable GNU units for time results
 gnuunits=0
