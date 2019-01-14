@@ -1,6 +1,9 @@
 name: dev
 root: <%= @args[0] || `pwd` %>
 
+pre_window:
+  - rvm use (cat .ruby-version)
+
 windows:
   - main:
       layout: '45e9,166x53,0,0[166x40,0,0,1,166x12,0,41{108x12,0,41,2,57x12,109,41,6}]'
