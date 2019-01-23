@@ -2,3 +2,8 @@
 !.ackrc
 !.vimrc
 !.zshrc
+!.gitignore
+!.config
+.config/*
+!.config/fish/
+!.config/fish/*

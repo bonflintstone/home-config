@@ -15,6 +15,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-haml'
 Plugin 'isRuslan/vim-es6'
 Plugin 'zah/nim.vim'
+Plugin 'dag/vim-fish'
 
 " Essential
 Plugin 'ctrlpvim/ctrlp.vim' " fuzzy finder
@@ -33,10 +34,10 @@ filetype plugin indent on
 set expandtab tabstop=2 softtabstop=0 shiftwidth=2 smarttab hlsearch splitbelow splitright
 set smartindent autoindent
 set noswapfile
+set ignorecase smartcase
 syntax on
 colo slate
 highlight Search cterm=underline
-let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 
 " for ctrlp
