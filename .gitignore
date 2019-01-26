@@ -16,6 +16,6 @@
 !.config/terminator/*
 !.config/libinput-gestures.conf
 !.config/fish/
-!.config/fish/*
+!.config/fish/**/*
 !.global-gitignore
 !.rvmrc
