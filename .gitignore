@@ -19,3 +19,4 @@
 !.config/fish/**/*
 !.global-gitignore
 !.rvmrc
+!.taskbook.json
