@@ -1,0 +1,9 @@
+name: server
+windows:
+  - name: main
+    layout: tiled 
+    panes:
+      - 'ssh bonflintstone.com'
+      - 'ssh bonflintstone.com'
+      - 'ssh bonflintstone.com'
+      - 'ssh bonflintstone.com'

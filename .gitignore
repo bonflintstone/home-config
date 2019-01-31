@@ -20,3 +20,5 @@
 !.global-gitignore
 !.rvmrc
 !.taskbook.json
+!.teamocil/
+!.teamocil/*
