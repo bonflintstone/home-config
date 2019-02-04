@@ -22,3 +22,5 @@
 !.taskbook.json
 !.teamocil/
 !.teamocil/*
+!.ssh/
+!.ssh/config
