@@ -35,6 +35,7 @@ set expandtab tabstop=2 softtabstop=0 shiftwidth=2 smarttab hlsearch splitbelow 
 set smartindent autoindent
 set noswapfile
 set ignorecase smartcase
+set mouse=a
 syntax on
 colo slate
 highlight Search cterm=underline
