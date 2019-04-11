@@ -2,8 +2,9 @@ AllCops:
   Exclude:
     - db/**/*
     - features/**/*
-    - db/**/*
-    - spec/factories/**/*
+    - '**/migrations/**'
+    - spec/**/*
+    - bin/**/*
 LineLength:
   Max: 100
   Enabled: true

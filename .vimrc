@@ -2,34 +2,32 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-
+call plug#begin('~/.vim/plugged')
 " Syntax
-Plugin 'slim-template/vim-slim.git'
-Plugin 'posva/vim-vue'
-Plugin 'wavded/vim-stylus'
-Plugin 'slime-lang/vim-slime-syntax'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'tpope/vim-haml'
-Plugin 'isRuslan/vim-es6'
-Plugin 'zah/nim.vim'
-Plugin 'dag/vim-fish'
+Plug 'posva/vim-vue'
+Plug 'wavded/vim-stylus'
+Plug 'slime-lang/vim-slime-syntax'
+Plug 'elixir-lang/vim-elixir'
+Plug 'kchmck/vim-coffee-script'
+Plug 'tpope/vim-haml'
+Plug 'isRuslan/vim-es6'
+Plug 'zah/nim.vim'
+Plug 'dag/vim-fish'
 
 " Essential
-Plugin 'ctrlpvim/ctrlp.vim' " fuzzy finder
-Plugin 'w0rp/ale' " linter
-Plugin 'tpope/vim-fugitive' " git
-Plugin 'airblade/vim-gitgutter' " git sidebar
+Plug 'ctrlpvim/ctrlp.vim' " fuzzy finder
+Plug 'w0rp/ale' " linter
+Plug 'tpope/vim-fugitive' " git
+Plug 'airblade/vim-gitgutter' " git sidebar
+Plug 'zxqfl/tabnine-vim'
 
 " Experimental
-Plugin 'tpope/vim-eunuch' " File command, renaming, deleting, etc
-Plugin 'tpope/vim-surround'
-Plugin 'zxqfl/tabnine-vim'
-
-call vundle#end()
-filetype plugin indent on
+Plug 'tpope/vim-eunuch' " File command, renaming, deleting, etc
+Plug 'tpope/vim-surround'
+Plug 'jceb/vim-orgmode'
+Plug 'tpope/repeat'
+Plug 'tpope/speeddating'
+call plug#end()
 
 set expandtab tabstop=2 softtabstop=0 shiftwidth=2 smarttab hlsearch splitbelow splitright
 set smartindent autoindent
