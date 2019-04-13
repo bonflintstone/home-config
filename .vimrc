@@ -25,8 +25,8 @@ Plug 'zxqfl/tabnine-vim'
 Plug 'tpope/vim-eunuch' " File command, renaming, deleting, etc
 Plug 'tpope/vim-surround'
 Plug 'jceb/vim-orgmode'
-Plug 'tpope/repeat'
-Plug 'tpope/speeddating'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-speeddating'
 call plug#end()
 
 set expandtab tabstop=2 softtabstop=0 shiftwidth=2 smarttab hlsearch splitbelow splitright
@@ -52,6 +52,7 @@ nnoremap <leader>t :tabe
 nnoremap <leader>r :syntax sync minlines=2000
 nnoremap <leader>n :noh
 nnoremap <leader>b :term ++curwin tb
+nnoremap <leader>o :e ~/Org/my.org
 
 au BufNewFile,BufRead *.jbuilder set ft=ruby
 au BufNewFile,BufRead *Thorfile set ft=ruby
