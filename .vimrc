@@ -69,6 +69,8 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v(git|hg|svn|node_modules|bower_components|tmp)$',
   \ }
 
-let g:ale_enabled = 0
+let g:ale_linters = {'javascript': ['eslint']}
+let g:ale_fixers = {'javascript': ['eslint', 'prettier'], 'vue': ['prettier'], 'ruby': ['rubocop']}
+let g:ale_fix_on_save = 1
 
 map <C-n> :NERDTreeToggle<CR>

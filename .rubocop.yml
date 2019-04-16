@@ -5,14 +5,14 @@ AllCops:
     - '**/migrations/**'
     - spec/**/*
     - bin/**/*
+Rails:
+  Enabled: true
 LineLength:
   Max: 100
   Enabled: true
 StringLiterals:
   Enabled: false
 Documentation:
-  Enabled: false
-Style/ClassAndModuleChildren:
   Enabled: false
 Style/FrozenStringLiteralComment:
   Enabled: false
