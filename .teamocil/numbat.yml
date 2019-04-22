@@ -1,7 +1,7 @@
 name: numbat
 windows:
   - name: frontend
-    root: ~/Documents/numbat-webapp/dashboard
+    root: ~/Projects/numbat-webapp/dashboard
     layout: '59d1,166x54,0,0[166x40,0,0,46,166x13,0,41{89x13,0,41,47,38x13,90,41,49,37x13,129,41,50}]'
     panes:
       - vim
@@ -12,7 +12,7 @@ windows:
       - yarn dev
 
   - name: backend
-    root: ~/Documents/numbat-server
+    root: ~/Projects/numbat-server
     layout: '59d1,166x54,0,0[166x40,0,0,46,166x13,0,41{89x13,0,41,47,38x13,90,41,49,37x13,129,41,50}]'
     panes:
       - vim
