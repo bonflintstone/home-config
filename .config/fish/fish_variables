@@ -4,8 +4,11 @@ SETUVAR --export EDITOR:vim
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
+SETUVAR _fish_abbr_be:bundle\x20exec
 SETUVAR _fish_abbr_gclean:git\x20clean\x20\x2dfd
+SETUVAR _fish_abbr_r:rvm\x20use\x20\x28cat\x20\x2eruby\x2dversion\x29
 SETUVAR _fish_abbr_rs:rails\x20s
+SETUVAR _fish_abbr_tm:rvm\x202\x2e5\x20do\x20teamocil
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:005fd7
