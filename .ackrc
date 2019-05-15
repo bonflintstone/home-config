@@ -8,5 +8,6 @@
 --ignore-dir=public/packs
 --ignore-file=is:yarn.lock
 
+--smart-case
 --type-set=MAP=.map
 --noMAP
