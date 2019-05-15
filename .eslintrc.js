@@ -1,4 +1,5 @@
 module.exports = {
+  parser: "babel-eslint",
   extends: ["eslint:all", "plugin:vue/recommended", "prettier"],
   plugins: ["prettier"],
   rules: {
@@ -14,6 +15,8 @@ module.exports = {
     "no-magic-numbers": "warn",
     "no-console": "off",
     eqeqeq: ["error", "smart"],
-    "no-eq-null": "off"
+    "no-eq-null": "off",
+    "prefer-named-capture-group": "off",
+    semi: ["error", "never"]
   }
 };

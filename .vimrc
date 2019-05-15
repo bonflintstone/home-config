@@ -19,14 +19,18 @@ Plug 'ctrlpvim/ctrlp.vim' " fuzzy finder
 Plug 'w0rp/ale' " linter
 Plug 'tpope/vim-fugitive' " git
 Plug 'airblade/vim-gitgutter' " git sidebar
-Plug 'zxqfl/tabnine-vim'
+Plug 'tpope/vim-eunuch' " File command, renaming, deleting, etc
 
 " Experimental
-Plug 'tpope/vim-eunuch' " File command, renaming, deleting, etc
 Plug 'tpope/vim-surround'
 Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-speeddating'
+Plug 'vim-scripts/utl.vim'
+Plug 'roxma/nvim-yarp' " dependency of ncm2
+Plug 'ncm2/ncm2' " autcomplete integration
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'master', 'do': 'bash install.sh' }
+ 
 call plug#end()
 
 set expandtab tabstop=2 softtabstop=0 shiftwidth=2 smarttab hlsearch splitbelow splitright
@@ -52,7 +56,8 @@ nnoremap <leader>t :tabe
 nnoremap <leader>r :syntax sync minlines=2000
 nnoremap <leader>n :noh
 nnoremap <leader>b :term ++curwin tb
-nnoremap <leader>o :e ~/Org/my.org
+nnoremap <leader>o :e ~/Documents/org/my.org
+nnoremap <leader>x :Utl
 
 au BufNewFile,BufRead *.jbuilder set ft=ruby
 au BufNewFile,BufRead *Thorfile set ft=ruby
@@ -64,13 +69,21 @@ au BufNewFile,BufRead *.hbs set ft=html
 au BufNewFile,BufRead *.babelrc set ft=javascript
 au BufNewFile,BufRead *.java set noexpandtab
 
+autocmd BufEnter  *  call ncm2#enable_for_buffer()
+
+imap jk <Esc>
+imap kj <Esc>
+
 let g:ctrlp_working_path_mode = ''
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v(git|hg|svn|node_modules|bower_components|tmp)$',
   \ }
 
 let g:ale_linters = {'javascript': ['eslint']}
-let g:ale_fixers = {'javascript': ['eslint', 'prettier'], 'vue': ['prettier'], 'ruby': ['rubocop']}
+let g:ale_fixers = {'javascript': ['eslint', 'prettier_eslint'], 'vue': ['prettier'], 'ruby': ['rubocop']}
 let g:ale_fix_on_save = 1
 
-map <C-n> :NERDTreeToggle<CR>
+let g:LanguageClient_serverCommands = {
+  \ 'javascript': ['javascript-typescript-stdio']
+  \ }
+

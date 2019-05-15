@@ -1,9 +1,11 @@
 [user]
 	name = Bonflintstone
 	email = freddy@railslove.com
-	signingkey = 3623EC53FFE08F62
+	signingkey = 08476215594F2749
 [core]
 	autocrlf = false
 	excludesfile = /home/bonflintstone/.global-gitignore
 [push]
 	default = simple
+[commit]
+	gpgsign = true
