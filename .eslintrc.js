@@ -1,5 +1,8 @@
 module.exports = {
-  parser: "babel-eslint",
+  parserOptions: {
+    parser: 'babel-eslint',
+    sourceType: 'module'
+  },
   extends: ["eslint:all", "plugin:vue/recommended", "prettier"],
   plugins: ["prettier"],
   rules: {
@@ -16,7 +19,6 @@ module.exports = {
     "no-console": "off",
     eqeqeq: ["error", "smart"],
     "no-eq-null": "off",
-    "prefer-named-capture-group": "off",
-    semi: ["error", "never"]
+    "prefer-named-capture-group": "off"
   }
 };
