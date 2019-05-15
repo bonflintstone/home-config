@@ -32,3 +32,4 @@
 
 !.ssh/
 !.ssh/config
+!.prettierrc
