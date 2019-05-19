@@ -6,10 +6,7 @@ call plug#begin('~/.vim/plugged')
 " Syntax
 Plug 'posva/vim-vue'
 Plug 'wavded/vim-stylus'
-Plug 'slime-lang/vim-slime-syntax'
 Plug 'elixir-lang/vim-elixir'
-Plug 'kchmck/vim-coffee-script'
-Plug 'tpope/vim-haml'
 Plug 'isRuslan/vim-es6'
 Plug 'zah/nim.vim'
 Plug 'dag/vim-fish'
@@ -20,6 +17,7 @@ Plug 'w0rp/ale' " linter
 Plug 'tpope/vim-fugitive' " git
 Plug 'airblade/vim-gitgutter' " git sidebar
 Plug 'tpope/vim-eunuch' " File command, renaming, deleting, etc
+Plug 'zxqfl/tabnine-vim'
 
 " Experimental
 Plug 'tpope/vim-surround'
@@ -27,9 +25,9 @@ Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-speeddating'
 Plug 'vim-scripts/utl.vim'
-Plug 'roxma/nvim-yarp' " dependency of ncm2
-Plug 'ncm2/ncm2' " autcomplete integration
-Plug 'autozimu/LanguageClient-neovim', { 'branch': 'master', 'do': 'bash install.sh' }
+Plug 'AndrewRadev/tagalong.vim'
+Plug 'AndrewRadev/switch.vim'
+Plug  'freitass/todo.txt-vim'
  
 call plug#end()
 
@@ -68,8 +66,6 @@ au BufNewFile,BufRead *Jenkinsfile set ft=javascript
 au BufNewFile,BufRead *.hbs set ft=html
 au BufNewFile,BufRead *.babelrc set ft=javascript
 au BufNewFile,BufRead *.java set noexpandtab
-
-autocmd BufEnter  *  call ncm2#enable_for_buffer()
 
 imap jk <Esc>
 imap kj <Esc>
