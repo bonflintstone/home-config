@@ -33,3 +33,9 @@
 !.ssh/
 !.ssh/config
 !.prettierrc
+
+!.todo-txt/
+!.todo-txt/*
+
+!.todo/
+!.todo/*
