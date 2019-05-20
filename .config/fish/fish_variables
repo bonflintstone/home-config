@@ -18,9 +18,12 @@ SETUVAR _fish_abbr_gm:git\x20merge\x20\x2dS
 SETUVAR _fish_abbr_gst:git\x20status
 SETUVAR _fish_abbr_r:rvm\x20use\x20\x28cat\x20\x2eruby\x2dversion\x29
 SETUVAR _fish_abbr_rs:rails\x20s
+SETUVAR _fish_abbr_rt:todo\x2dtxt\x20\x2dd\x20\x2etodo/railslove\x2econfig
+SETUVAR _fish_abbr_rtodo:vim\x20\x2etodo\x2dtxt/railslove\x2etodo\x2etxt
 SETUVAR _fish_abbr_t:todo\x2dtxt
 SETUVAR _fish_abbr_tm:rvm\x202\x2e5\x20do\x20teamocil
 SETUVAR _fish_abbr_todo:vim\x20Nextcloud/todo\x2etxt
+SETUVAR _fish_abbr_tr_3D_todo_2D_text:\x2dd\x20\x2etodo/railslove\x2econfig
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:005fd7
