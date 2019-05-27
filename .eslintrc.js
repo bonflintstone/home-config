@@ -19,6 +19,7 @@ module.exports = {
     "no-console": "off",
     eqeqeq: ["error", "smart"],
     "no-eq-null": "off",
-    "prefer-named-capture-group": "off"
+    "prefer-named-capture-group": "off",
+    "no-magic-numbers": "off"
   }
 };

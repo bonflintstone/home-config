@@ -28,6 +28,7 @@ Plug 'vim-scripts/utl.vim'
 Plug 'AndrewRadev/tagalong.vim'
 Plug 'AndrewRadev/switch.vim'
 Plug  'freitass/todo.txt-vim'
+Plug 'rhysd/vim-grammarous'
  
 call plug#end()
 
@@ -66,6 +67,8 @@ au BufNewFile,BufRead *Jenkinsfile set ft=javascript
 au BufNewFile,BufRead *.hbs set ft=html
 au BufNewFile,BufRead *.babelrc set ft=javascript
 au BufNewFile,BufRead *.java set noexpandtab
+au BufNewFile,BufRead *.md set spell spelllang=en_US
+au BufNewFile,BufRead *.txt set spell spelllang=en_US
 
 imap jk <Esc>
 imap kj <Esc>
@@ -83,3 +86,8 @@ let g:LanguageClient_serverCommands = {
   \ 'javascript': ['javascript-typescript-stdio']
   \ }
 
+
+let g:grammarous#default_comments_only_filetypes = {
+  \ '*' : 1, 'help' : 0, 'markdown' : 0,
+  \ }
+let g:grammarous#enabled_rules = {'*' : ['PASSIVE_VOICE']}

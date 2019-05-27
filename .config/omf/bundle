@@ -2,5 +2,6 @@ package foreign-env
 package nvm
 package rvm
 package yarn-binpath
+package z
 theme default
 theme l
