@@ -20,6 +20,7 @@ module.exports = {
     eqeqeq: ["error", "smart"],
     "no-eq-null": "off",
     "prefer-named-capture-group": "off",
-    "no-magic-numbers": "off"
+    "no-magic-numbers": "off",
+    "require-unicode-regexp": "off"
   }
 };
