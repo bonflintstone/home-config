@@ -21,6 +21,7 @@ module.exports = {
     "no-eq-null": "off",
     "prefer-named-capture-group": "off",
     "no-magic-numbers": "off",
-    "require-unicode-regexp": "off"
+    "require-unicode-regexp": "off",
+    "vue/html-self-closing": "off"
   }
 };
