@@ -67,8 +67,6 @@ au BufNewFile,BufRead *Jenkinsfile set ft=javascript
 au BufNewFile,BufRead *.hbs set ft=html
 au BufNewFile,BufRead *.babelrc set ft=javascript
 au BufNewFile,BufRead *.java set noexpandtab
-au BufNewFile,BufRead *.md set spell spelllang=en_US
-au BufNewFile,BufRead *.txt set spell spelllang=en_US
 
 imap jk <Esc>
 imap kj <Esc>
