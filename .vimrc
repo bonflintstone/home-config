@@ -72,6 +72,7 @@ imap jk <Esc>
 imap kj <Esc>
 
 let g:ctrlp_working_path_mode = ''
+let g:ctrlp_show_hidden = 1
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v(git|hg|svn|node_modules|bower_components|tmp)$',
   \ }
