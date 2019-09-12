@@ -17,7 +17,7 @@ Plug 'w0rp/ale' " linter
 Plug 'tpope/vim-fugitive' " git
 Plug 'airblade/vim-gitgutter' " git sidebar
 Plug 'tpope/vim-eunuch' " File command, renaming, deleting, etc
-Plug 'zxqfl/tabnine-vim'
+Plug 'zxqfl/tabnine-vim' " Autocomplete
 
 " Experimental
 Plug 'tpope/vim-surround'
@@ -78,7 +78,8 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 let g:ale_linters = {'javascript': ['eslint']}
-let g:ale_fixers = {'javascript': ['eslint', 'prettier_eslint'], 'vue': ['prettier'], 'ruby': ['rubocop']}
+" let g:ale_fixers = {'javascript': ['eslint', 'prettier_eslint'], 'vue': ['prettier'], 'ruby': ['rubocop']}
+let g:ale_fixers = {'javascript': ['eslint', 'prettier_eslint'], 'vue': ['prettier']}
 let g:ale_fix_on_save = 1
 
 let g:LanguageClient_serverCommands = {
