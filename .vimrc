@@ -29,6 +29,7 @@ Plug 'AndrewRadev/tagalong.vim'
 Plug 'AndrewRadev/switch.vim'
 Plug  'freitass/todo.txt-vim'
 Plug 'rhysd/vim-grammarous'
+Plug 'ryanoasis/vim-devicons'
  
 call plug#end()
 

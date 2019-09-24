@@ -18,9 +18,7 @@ windows:
     panes:
       - vim
       - rvm use (cat .ruby-version)
-      - commands:
-          - cd ~/Vpns
-          - sudo openvpn RACKSPACE_RLOVE.ovpn
+      -
       - commands:
           - rvm use (cat .ruby-version)
           - rails s
