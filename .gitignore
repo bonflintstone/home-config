@@ -26,6 +26,11 @@
 !.config/omf/**/*
 !.config/touchegg/
 !.config/touchegg/touchegg.conf
+!.config/touchegg/
+!.config/sway
+!.config/sway/*
+!.config/waybar
+!.config/waybar/*
 
 !.teamocil/
 !.teamocil/*

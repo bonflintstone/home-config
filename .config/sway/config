@@ -1,0 +1,4 @@
+default_border none
+
+include /etc/sway/config.d/*
+include config.d/*
