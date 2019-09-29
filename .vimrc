@@ -79,8 +79,8 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 let g:ale_linters = {'javascript': ['eslint']}
-" let g:ale_fixers = {'javascript': ['eslint', 'prettier_eslint'], 'vue': ['prettier'], 'ruby': ['rubocop']}
-let g:ale_fixers = {'javascript': ['eslint', 'prettier_eslint'], 'vue': ['prettier']}
+let g:ale_fixers = {'javascript': ['eslint', 'prettier_eslint'], 'vue': ['prettier'], 'ruby': ['rubocop']}
+" let g:ale_fixers = {'javascript': ['eslint', 'prettier_eslint'], 'vue': ['prettier']}
 let g:ale_fix_on_save = 1
 
 let g:LanguageClient_serverCommands = {

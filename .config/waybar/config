@@ -1,0 +1,73 @@
+// vim:ft=json
+
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode",
+        "sway/window"
+    ],
+    "modules-right": [
+        "tray",
+        "pulseaudio",
+        "cpu",
+        "backlight",
+        "battery",
+        "clock"
+    ],
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}"
+    },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+    "clock": {
+        "format": "{:%I:%M:%S %p}",
+        "tooltip-format": "{:%Y-%m-%d | %H:%M}",
+        "format-alt": "{:%a, %b %d | %I:%M:%S %p}",
+        "interval": 1
+    },
+    "cpu": {
+        "format": "{usage}% "
+    },
+    "custom/battery_time": {
+        "format": "  {}",
+        "exec": "acpi -b | cut -d ',' -f3 | awk '{print $1}' | cut -d ':' -f1,2",
+        "interval": 30
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 10
+        },
+        "format": "{capacity}% {icon}",
+        "format-icons": [" ", " ", " ", " ", " "]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "pulseaudio": {
+        "scroll-step": 1,
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": " ",
+        "format-icons": {
+            "headphones": " ",
+            "handsfree": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": [" ", " "]
+        },
+        "on-click": "pavucontrol"
+    }
+}
