@@ -1,0 +1,10 @@
+set $menu albert show
+set $term gnome-terminal
+
+# Background Stuff
+exec nextcloud
+exec albert
+exec redshift-gtk
+# hidpi workaround for some applications
+exec xrdb -load ~/.Xresources
+# exec ruby ~/.config/sway/background_changer.sh
