@@ -18,7 +18,7 @@ windows:
     panes:
       - vim
       - rvm use (cat .ruby-version)
-      - ''
+      - echo 'eT9UEjvqqv4v3AKy' | sudo openconnect --config ~/Vpns/numbat-config.openconnect  37.188.102.86
       - commands:
           - rvm use (cat .ruby-version)
           - rails s

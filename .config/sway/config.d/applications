@@ -8,3 +8,4 @@ exec redshift-gtk
 # hidpi workaround for some applications
 exec xrdb -load ~/.Xresources
 # exec ruby ~/.config/sway/background_changer.sh
+exec mako
