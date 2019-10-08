@@ -9,3 +9,4 @@ exec redshift-gtk
 exec xrdb -load ~/.Xresources
 # exec ruby ~/.config/sway/background_changer.sh
 exec mako
+libinput-gestures-setup restart
