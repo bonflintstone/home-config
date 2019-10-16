@@ -10,6 +10,7 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'isRuslan/vim-es6'
 Plug 'zah/nim.vim'
 Plug 'dag/vim-fish'
+Plug 'ap/vim-css-color'
 
 " Essential
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy finder
@@ -80,7 +81,6 @@ let g:ctrlp_custom_ignore = {
 
 let g:ale_linters = {'javascript': ['eslint']}
 let g:ale_fixers = {'javascript': ['eslint', 'prettier_eslint'], 'vue': ['prettier'], 'ruby': ['rubocop']}
-" let g:ale_fixers = {'javascript': ['eslint', 'prettier_eslint'], 'vue': ['prettier']}
 let g:ale_fix_on_save = 1
 
 let g:LanguageClient_serverCommands = {

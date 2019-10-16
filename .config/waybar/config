@@ -31,7 +31,6 @@
     },
     "clock": {
         "format": "{:%H:%M:%S %p}",
-        "tooltip-format": "{:%Y-%m-%d | %H:%M}",
         "format-alt": "{:%a, %b %d | %H:%M:%S %p}",
         "interval": 1
     },
