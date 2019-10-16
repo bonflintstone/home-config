@@ -36,5 +36,5 @@ bindsym XF86Bluetooth exec playerctl next
 # it tends to break after running the gnome/Ubuntu desktop
 #
 
-bindsym XF86MonBrightnessDown exec 'brightnessctl set 5%-'
-bindsym XF86MonBrightnessUp exec 'brightnessctl set +5%'
+bindsym XF86MonBrightnessDown exec 'brightnessctl set 4%- -n 5%'
+bindsym XF86MonBrightnessUp exec 'brightnessctl set +4%'
