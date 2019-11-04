@@ -24,7 +24,7 @@ SETUVAR _fish_abbr_rt:todo\x2dtxt\x20\x2dd\x20\x2etodo/railslove\x2econfig
 SETUVAR _fish_abbr_rtodo:vim\x20\x7e/Nextcloud/Other/todo\x2dtxt/railslove\x2etodo\x2etxt
 SETUVAR _fish_abbr_rtt:todo\x2dtxt\x20\x2dd\x20\x7e/\x2etodo/railslove\x2econfig\x20ls
 SETUVAR _fish_abbr_t:todo\x2dtxt
-SETUVAR _fish_abbr_tm:rvm\x202\x2e5\x20do\x20teamocil
+SETUVAR _fish_abbr_tm:rvm\x202\x2e5\x20do\x20teamocil\x20\x2d\x2dhere
 SETUVAR _fish_abbr_todo:vim\x20\x7e/Nextcloud/Other/todo\x2dtxt/todo\x2etxt
 SETUVAR _fish_abbr_tt:todo\x2dtxt\x20ls
 SETUVAR dangerous_nocmdhist:c\x1ed\x1ell\x1els\x1em\x1es

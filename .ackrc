@@ -3,7 +3,6 @@
 --ignore-dir=coverage
 --ignore-dir=node_modules
 --ignore-dir=dist
---ignore-dir=public
 --ignore-dir=bower_components
 --ignore-dir=public/packs
 --ignore-file=is:yarn.lock

@@ -3,4 +3,4 @@ output DP-2 pos 0 0 res 3440x1440
 
 output eDP-1 scale 1.8
 
-output "*" bg ~/Pictures/bg.jpg fill
+output "*" bg /home/bonflintstone/Pictures/bg.jpg fill

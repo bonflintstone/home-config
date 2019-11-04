@@ -15,7 +15,7 @@ windows:
     panes:
       - vim
       - rvm use (cat .ruby-version)
-      - ''
+      - docker start postgis redis
       - commands:
           - rvm use (cat .ruby-version)
           - rails s

@@ -14,7 +14,7 @@
         "pulseaudio",
         "cpu",
         "backlight",
-        "battery",
+        "custom/battery",
         "clock"
     ],
     "sway/workspaces": {
@@ -34,13 +34,19 @@
         "format-alt": "{:%a, %b %d | %H:%M:%S %p}",
         "interval": 1
     },
-    "cpu": {
-        "format": "{usage}% "
+    "backlight": {
+        "format": "🔆 {}%",
+        "on-scroll-down": "brightnessctl set 4%- -n 5%",
+        "on-scroll-up": "brightnessctl set +4%"
     },
-    "custom/battery_time": {
-        "format": "  {}",
-        "exec": "acpi -b | cut -d ',' -f3 | awk '{print $1}' | cut -d ':' -f1,2",
-        "interval": 30
+    "cpu": {
+        "format": "🤖 {usage}%"
+    },
+    "custom/battery": {
+        "format": "🔋{}",
+        "exec": "acpi | grep -v 'unavailable' | cut -d ',' -f2,3 | sed 's/:[0-9][0-9] /h /'",
+        "interval": 5,
+        "tooltip-format": "Hi {}"
     },
     "battery": {
         "states": {
@@ -52,17 +58,12 @@
     },
     "pulseaudio": {
         "scroll-step": 1,
-        "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon}",
-        "format-muted": "m  ",
+        "format": "{icon} {volume}%",
+        "format-bluetooth": " {volume}%",
+        "format-muted": "🔇",
         "format-icons": {
-            "headphones": " ",
-            "handsfree": " ",
-            "headset": " ",
-            "phone": " ",
-            "portable": " ",
-            "car": " ",
-            "default": [" ", " "]
+            "headphones": "🎧",
+            "default": ["🔈", "🔉", "🔊"]
         },
         "on-click": "pavucontrol"
     }
