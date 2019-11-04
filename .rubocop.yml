@@ -3,7 +3,6 @@ AllCops:
     - db/**/*
     - features/**/*
     - '**/migrations/**'
-    - spec/**/*
     - bin/**/*
 Rails:
   Enabled: true

@@ -28,9 +28,10 @@ Plug 'tpope/vim-speeddating'
 Plug 'vim-scripts/utl.vim'
 Plug 'AndrewRadev/tagalong.vim'
 Plug 'AndrewRadev/switch.vim'
-Plug  'freitass/todo.txt-vim'
+Plug 'freitass/todo.txt-vim'
 Plug 'rhysd/vim-grammarous'
 Plug 'ryanoasis/vim-devicons'
+Plug 'scrooloose/nerdtree'
  
 call plug#end()
 
@@ -48,7 +49,7 @@ let g:netrw_banner = 0
 set wildignore+=*/tmp/*,*.so,*.swp,*.zi,*/node_modules/*,*/bower_components/*,*.class
 
 let mapleader = ' '
-nnoremap <leader>e :Explore
+nnoremap <leader>e :e %:p:h
 nnoremap <leader>q :q
 nnoremap <leader>w :w
 nnoremap <leader>s :sp
@@ -70,6 +71,10 @@ au BufNewFile,BufRead *.hbs set ft=html
 au BufNewFile,BufRead *.babelrc set ft=javascript
 au BufNewFile,BufRead *.java set noexpandtab
 
+au BufNewFile,BufRead *.markdown :setlocal spell spelllang=en_us
+au BufNewFile,BufRead *.help :setlocal spell spelllang=en_us
+au BufNewFile,BufRead *.txt :setlocal spell spelllang=en_us
+
 imap jk <Esc>
 imap kj <Esc>
 
@@ -79,7 +84,7 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v(git|hg|svn|node_modules|bower_components|tmp)$',
   \ }
 
-let g:ale_linters = {'javascript': ['eslint']}
+let g:ale_linters = {'javascript': ['eslint', 'prettier_eslint'], 'vue': ['prettier'], 'ruby': ['rubocop']}
 let g:ale_fixers = {'javascript': ['eslint', 'prettier_eslint'], 'vue': ['prettier'], 'ruby': ['rubocop']}
 let g:ale_fix_on_save = 1
 
@@ -87,8 +92,7 @@ let g:LanguageClient_serverCommands = {
   \ 'javascript': ['javascript-typescript-stdio']
   \ }
 
-
 let g:grammarous#default_comments_only_filetypes = {
-  \ '*' : 1, 'help' : 0, 'markdown' : 0,
+  \ '*' : 1, 'help' : 0, 'markdown' : 0, 'todo': 0
   \ }
 let g:grammarous#enabled_rules = {'*' : ['PASSIVE_VOICE']}

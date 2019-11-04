@@ -1,12 +1,11 @@
 set $menu albert show
-set $term gnome-terminal
+set $term alacritty
 
 # Background Stuff
-exec nextcloud
+exec 'nextcloud --background'
 exec albert
 exec redshift-gtk
 # hidpi workaround for some applications
 exec xrdb -load ~/.Xresources
-# exec ruby ~/.config/sway/background_changer.sh
 exec mako --default-timeout 10000
 exec libinput-gestures-setup restart
