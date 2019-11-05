@@ -15,6 +15,7 @@
         "cpu",
         "backlight",
         "custom/battery",
+        "custom/tasks",
         "clock"
     ],
     "sway/workspaces": {
@@ -66,5 +67,11 @@
             "default": ["🔈", "🔉", "🔊"]
         },
         "on-click": "pavucontrol"
+    },
+    "custom/tasks": {
+      "format": "  ☑️ {}",
+      "exec": "~/.config/waybar/custom/tasks.bash",
+      "interval": 60,
+      "tooltip-format": "{}"
     }
 }
