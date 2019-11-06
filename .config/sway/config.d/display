@@ -1,6 +1,18 @@
-output eDP-1 pos 970 1440 res 3000x2000
-output DP-2 pos 0 0 res 3440x1440
+set $laptop eDP-1
+set $external DP-2
 
-output eDP-1 scale 1.8
+output $laptop pos 970 1440 res 3000x2000
+output $external pos 0 0 res 3440x1440
+
+output $laptop scale 1.8
 
 output "*" bg /home/bonflintstone/Pictures/bg.jpg fill
+
+bindswitch --locked lid:on\
+  output $laptop disable,\
+  output $external disable,\
+  exec $swaylock_command
+
+bindswitch --locked lid:off\
+  output $laptop enable,\
+  output $external enable
