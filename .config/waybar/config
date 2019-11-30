@@ -15,7 +15,6 @@
         "cpu",
         "backlight",
         "custom/battery",
-        "custom/tasks",
         "clock"
     ],
     "sway/workspaces": {

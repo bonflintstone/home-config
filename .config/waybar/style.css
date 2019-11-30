@@ -7,7 +7,7 @@
 }
 
 window#waybar {
-    background: #222222;
+    background: rgba(0.2, 0.2, 0.2, 0.4);
     color: #CCC;
 }
 
@@ -20,7 +20,6 @@ window#waybar {
 }
 
 #workspaces button.focused {
-    background: #222222;
     border-bottom: 2px solid #BBBBBB;
 }
 

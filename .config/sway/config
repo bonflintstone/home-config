@@ -1,7 +1,2 @@
-default_border pixel 5
-
-gaps inner 15
-smart_gaps on
-
 include /etc/sway/config.d/*
 include config.d/*
