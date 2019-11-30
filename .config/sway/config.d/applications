@@ -1,11 +1,12 @@
 set $menu albert show
 set $term alacritty
 
-# Background Stuff
-exec 'nextcloud --background'
-exec albert
 # hidpi workaround for some applications
-exec xrdb -load ~/.Xresources
-exec mako --default-timeout 10000
-exec libinput-gestures-setup restart
-exec redshift-gtk
+exec 'xrdb -load ~/.Xresources'
+
+exec 'mako --default-timeout 10000'
+exec 'libinput-gestures-setup restart'
+exec 'nextcloud --background'
+exec 'redshift-gtk'
+exec 'swaymsg exec /home/bonflintstone/.config/sway/background_changer'
+exec 'albert'

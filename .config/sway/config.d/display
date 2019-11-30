@@ -6,12 +6,10 @@ output $external pos 0 0 res 3440x1440
 
 output $laptop scale 1.8
 
-output "*" bg /home/bonflintstone/Pictures/bg.jpg fill
-
 bindswitch --locked lid:on\
+  exec $swaylock_command,\
   output $laptop disable,\
-  output $external disable,\
-  exec $swaylock_command
+  output $external disable
 
 bindswitch --locked lid:off\
   output $laptop enable,\

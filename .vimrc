@@ -18,7 +18,7 @@ Plug 'w0rp/ale' " linter
 Plug 'tpope/vim-fugitive' " git
 Plug 'airblade/vim-gitgutter' " git sidebar
 Plug 'tpope/vim-eunuch' " File command, renaming, deleting, etc
-Plug 'zxqfl/tabnine-vim' " Autocomplete
+" Plug 'zxqfl/tabnine-vim' " Autocomplete
 
 " Experimental
 Plug 'tpope/vim-surround'
@@ -40,6 +40,8 @@ set smartindent autoindent
 set noswapfile
 set ignorecase smartcase
 set mouse=a
+set backupcopy=yes
+
 syntax on
 colo slate
 highlight Search cterm=underline
