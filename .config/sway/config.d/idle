@@ -3,5 +3,5 @@ exec swayidle -w \
          before-sleep 'swaylock -f -c 000000'
 
 set $swaylock_command swaylock -f --daemonize \
-    --image /home/bonflintstone/Pictures/bg.jpg \
+    --image /home/bonflintstone/Pictures/wallpapers/mountain.jpg \
     --ignore-empty-password
