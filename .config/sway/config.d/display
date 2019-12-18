@@ -5,12 +5,11 @@ output $laptop pos 970 1440 res 3000x2000
 output $external pos 0 0 res 3440x1440
 
 output $laptop scale 1.8
+output $external scale 1.0
 
 bindswitch --locked lid:on\
   exec $swaylock_command,\
-  output $laptop disable,\
-  output $external disable
+  output '*' disable
 
 bindswitch --locked lid:off\
-  output $laptop enable,\
-  output $external enable
+  output '*' enable
