@@ -31,10 +31,6 @@
 !.config/sway/**/*
 !.config/waybar
 !.config/waybar/**/*
-!.config/joplin
-!.config/joplin/**/*
-!.config/joplin-desktop
-!.config/joplin-desktop/**/*
 !.config/nvim
 !.config/nvim/**/*
 

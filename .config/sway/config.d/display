@@ -1,14 +1,24 @@
 set $laptop eDP-1
-set $external DP-2
+set $curved DP-1
+set $portrait DP-2
 
-output $laptop pos 970 1440 res 3000x2000
-output $external pos 0 0 res 3440x1440
-
-output $laptop scale 1.8
-output $external scale 1.0
+output $portrait {
+  pos 0 0 res 1080x1920
+  transform 90
+  scale 1.0
+}
+output $curved {
+  pos 1080 0 res 3440x1440
+  scale 1.0
+}
+output $laptop {
+  pos 4520 800 res 3000x2000
+  scale 2.0
+}
 
 bindswitch --locked lid:on\
   exec $swaylock_command,\
+  exec reload,\
   output '*' disable
 
 bindswitch --locked lid:off\

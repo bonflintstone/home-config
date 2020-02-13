@@ -1,4 +1,3 @@
-# Defined in - @ line 1
-function gd --description 'alias gd git diff'
-	git diff $argv;
+function gd
+	git diff; git ls-files --others --exclude-standard | xargs -n 1 git diff /dev/null;
 end

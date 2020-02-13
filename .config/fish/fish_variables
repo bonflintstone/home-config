@@ -1,7 +1,10 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR ANDROID_HOME:/home/bonflintstone/\x2eandroid/Sdk/
+SETUVAR ANDROID_SDK_ROOT:/home/bonflintstone/\x2eandroid/Sdk/
 SETUVAR --export EDITOR:vim
 SETUVAR NODE_ENV:development
+SETUVAR --path PATH:/home/bonflintstone/\x2eyarn/bin\x1e/home/bonflintstone/\x2ervm/gems/ruby\x2d2\x2e5\x2e3/bin\x1e/home/bonflintstone/\x2ervm/gems/ruby\x2d2\x2e5\x2e3\x40global/bin\x1e/home/bonflintstone/\x2ervm/rubies/ruby\x2d2\x2e5\x2e3/bin\x1e/home/bonflintstone/\x2envm/versions/node/v8\x2e16\x2e0/bin\x1e/snap/bin/\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/sbin\x1e/usr/bin\x1e/sbin\x1e/bin\x1e/usr/games\x1e/usr/local/games\x1e/home/bonflintstone/\x2ervm/bin
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
@@ -9,12 +12,10 @@ SETUVAR _fish_abbr_be:bundle\x20exec
 SETUVAR _fish_abbr_ga:git\x20add
 SETUVAR _fish_abbr_gall:git\x20add\x20\x2d\x2dall
 SETUVAR _fish_abbr_gb:git\x20branch
-SETUVAR _fish_abbr_gc:git\x20commit
 SETUVAR _fish_abbr_gcam:git\x20commit\x20\x2dam
-SETUVAR _fish_abbr_gclean:git\x20clean\x20\x2dfd
+SETUVAR _fish_abbr_gclean:git\x20clean\x20\x2dfdi
 SETUVAR _fish_abbr_gcm:git\x20commit\x20\x2dm
 SETUVAR _fish_abbr_gco:git\x20checkout
-SETUVAR _fish_abbr_gd:git\x20diff
 SETUVAR _fish_abbr_glg:git\x20log\x20\x2d\x2ddecorate
 SETUVAR _fish_abbr_gm:git\x20merge
 SETUVAR _fish_abbr_gst:git\x20status
@@ -59,4 +60,4 @@ SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_user_paths:/home/bonflintstone/\x2eandroid/platform\x2dtools/\x1e/snap/bin/\x1e/home/bonflintstone/\x2eandroid/tools/bin/
+SETUVAR fish_user_paths:/snap/bin\x1e/home/bonflintstone/\x2eandroid/Sdk/platform\x2dtools/\x1e/home/bonflintstone/\x2eandroid/Sdk/tools/
