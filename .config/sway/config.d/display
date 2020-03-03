@@ -13,7 +13,7 @@ output $curved {
 }
 output $laptop {
   pos 4520 800 res 3000x2000
-  scale 2.0
+  scale 1.9
 }
 
 bindswitch --locked lid:on\
