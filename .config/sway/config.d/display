@@ -8,11 +8,13 @@ output $portrait {
   scale 1.0
 }
 output $curved {
-  pos 1080 0 res 3440x1440
+  # pos 1080 0 res 3440x1440
+  pos 0 0 res 3440x1440
   scale 1.0
 }
 output $laptop {
-  pos 4520 800 res 3000x2000
+  # pos 4520 800 res 3000x2000
+  pos 970 1440 res 3000x2000
   scale 1.9
 }
 

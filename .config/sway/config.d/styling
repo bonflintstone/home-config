@@ -1,7 +1,7 @@
 default_border pixel 10
 smart_borders on
 
-output "*" bg /home/bonflintstone/Pictures/wallpapers/forest.jpg fill
+output "*" bg /home/bonflintstone/Pictures/wallpapers/caribou.jpg fill
 
 client.focused #00000000 #00000000 #FFFFFFFF #00000000 #00000000
 client.unfocused #00000000 #00000000 #AAAAAAFF #00000000 #00000000
