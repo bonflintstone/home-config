@@ -18,6 +18,7 @@ SETUVAR _fish_abbr_gcm:git\x20commit\x20\x2dm
 SETUVAR _fish_abbr_gco:git\x20checkout
 SETUVAR _fish_abbr_glg:git\x20log\x20\x2d\x2ddecorate
 SETUVAR _fish_abbr_gm:git\x20merge
+SETUVAR _fish_abbr_gs:git\x20switch
 SETUVAR _fish_abbr_gst:git\x20status
 SETUVAR _fish_abbr_r:rvm\x20use\x20\x28cat\x20\x2eruby\x2dversion\x29
 SETUVAR _fish_abbr_rs:rails\x20s
