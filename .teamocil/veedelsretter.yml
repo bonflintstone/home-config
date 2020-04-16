@@ -6,7 +6,7 @@ windows:
     panes:
       - vim
       - rvm use (cat .ruby-version)
-      - ''
+      - docker-compose up
       - commands:
           - rvm use (cat .ruby-version)
           - bin/webpack-dev-server

@@ -62,6 +62,7 @@ au BufNewFile,BufRead *.es6 set ft=javascript
 au BufNewFile,BufRead *Jenkinsfile set ft=javascript
 au BufNewFile,BufRead *.hbs set ft=html
 au BufNewFile,BufRead *.babelrc set ft=javascript
+au BufNewFile,BufRead *.inky set ft=haml
 au BufNewFile,BufRead *.java set noexpandtab
 
 au BufNewFile,BufRead *.markdown :setlocal spell spelllang=en_us
