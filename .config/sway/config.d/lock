@@ -1,0 +1,5 @@
+set $swaylock_command sh -c '\
+  swaylock --image /home/bonflintstone/Pictures/wallpapers/mountain.jpg --ignore-empty-password;\
+  sleep 0.1;\
+  swaymsg reload\
+  '
