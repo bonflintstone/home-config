@@ -1,0 +1,23 @@
+name: rcvr
+windows:
+  - name: backend
+    root: ~/Projects/rcvr-api
+    layout: '214c,166x54,0,0[166x40,0,0,9,166x13,0,41{89x13,0,41,10,20x13,90,41,11,27x13,111,41,12,27x13,139,41,17}]'
+    panes:
+      - vim
+      - rvm use (cat .ruby-version)
+      - docker-compose up
+      - stripe listen --forward-to localhost:3000/stripe-webhooks
+      - commands:
+          - rvm use (cat .ruby-version)
+          - rails s -b 0.0.0.0
+
+  - name: frontend
+    root: ~/Projects/rcvr-app
+    layout: '214c,166x54,0,0[166x40,0,0,9,166x13,0,41{89x13,0,41,10,20x13,90,41,11,27x13,111,41,12,27x13,139,41,17}]'
+    panes:
+      - vim
+      - ''
+      - ''
+      - ''
+      - npm run dev -- -p 4000

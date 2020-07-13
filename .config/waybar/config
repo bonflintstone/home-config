@@ -10,6 +10,7 @@
         "sway/window"
     ],
     "modules-right": [
+        "custom/scratchpad",
         "tray",
         "pulseaudio",
         "cpu",
@@ -27,7 +28,7 @@
     },
     "tray": {
         "icon-size": 18,
-        "spacing": 10
+        "spacing": 5
     },
     "clock": {
         "format": "{:%H:%M:%S %p}",
@@ -36,7 +37,7 @@
     },
     "backlight": {
         "format": "🔆 {}%",
-        "on-scroll-down": "brightnessctl set 4%- -n 5%",
+        "on-scroll-down": "brightnessctl set 4%- -n 1%",
         "on-scroll-up": "brightnessctl set +4%"
     },
     "cpu": {
@@ -46,7 +47,13 @@
         "format": "🔋{}",
         "exec": "acpi | grep -v 'unavailable' | cut -d ',' -f2,3 | sed 's/:[0-9][0-9] /h /'",
         "interval": 5,
-        "tooltip-format": "Hi {}"
+        "tooltip-format": "{}"
+    },
+    "custom/scratchpad": {
+        "format": "🗒️ [{}]",
+        "exec": "swaymsg -t get_tree | jq -r 'recurse(.nodes[]?) | select(.name == \"__i3_scratch\").floating_nodes[].name' | cut -c 1-20 | awk 'ORS=\", \"' | sed 's/, $//'",
+        "interval": 1,
+        "tooltip-format": "{}"
     },
     "battery": {
         "states": {
@@ -66,11 +73,5 @@
             "default": ["🔈", "🔉", "🔊"]
         },
         "on-click": "pavucontrol"
-    },
-    "custom/tasks": {
-      "format": "  ☑️ {}",
-      "exec": "~/.config/waybar/custom/tasks.bash",
-      "interval": 60,
-      "tooltip-format": "{}"
     }
 }

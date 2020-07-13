@@ -12,6 +12,8 @@ Plug 'zah/nim.vim'
 Plug 'dag/vim-fish'
 Plug 'ap/vim-css-color'
 Plug 'jeffkreeftmeijer/vim-dim'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 
 " Essential
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy finder
@@ -39,7 +41,7 @@ highlight Search cterm=underline
 let g:netrw_banner = 0
 
 " for ctrlp
-set wildignore+=*/tmp/*,*.so,*.swp,*.zi,*/node_modules/*,*/bower_components/*,*.class
+set wildignore+=*/tmp/*,*.so,*.swp,*.zi,*/node_modules/*,*/bower_components/*,*.class,*/.next/*
 
 let mapleader = ' '
 nnoremap <leader>e :e %:p:h
@@ -57,7 +59,6 @@ nnoremap <leader>x :Utl
 au BufNewFile,BufRead *.jbuilder set ft=ruby
 au BufNewFile,BufRead *Thorfile set ft=ruby
 au BufNewFile,BufRead *Fastfile set ft=ruby
-au BufNewFile,BufRead *.slim set ft=slim
 au BufNewFile,BufRead *.es6 set ft=javascript
 au BufNewFile,BufRead *Jenkinsfile set ft=javascript
 au BufNewFile,BufRead *.hbs set ft=html
@@ -79,7 +80,7 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 let g:ale_linters = {'javascript': ['eslint', 'prettier_eslint'], 'vue': ['prettier'], 'ruby': ['rubocop']}
-let g:ale_fixers = {'javascript': ['eslint', 'prettier_eslint'], 'vue': ['prettier'], 'ruby': ['rubocop']}
+let g:ale_fixers = {'javascript': ['eslint', 'prettier_eslint'], 'typescript': ['eslint', 'prettier_eslint'], 'vue': ['prettier'], 'ruby': ['rubocop']}
 let g:ale_fix_on_save = 1
 
 highlight GitGutterAdd    ctermfg=2
