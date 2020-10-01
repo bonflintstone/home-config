@@ -1,4 +1,4 @@
-# Defined in /home/bonflintstone/.config/fish/functions/gd.fish @ line 1
-function gd
-	git diff; git ls-files --others --exclude-standard | xargs -n 1 git diff /dev/null;
+# Defined in - @ line 1
+function gd --wraps='git add -NA; git diff' --description 'alias gd git add -NA; git diff'
+  git add -NA; git diff $argv;
 end

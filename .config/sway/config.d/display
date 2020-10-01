@@ -7,12 +7,14 @@ output $portable2 {
   scale 1.0
 }
 output $portable {
-  pos 0 0 res 3840x2160
-  scale 2.0
+  pos 0 0
+  scale 1.0
 }
+
 output $laptop {
-  pos 1920 0 res 3000x2000
-  scale 1.9
+  pos 970 1440 res 3000x2000
+  scale 2
+  # dpms off
 }
 
 bindswitch --locked lid:on\
