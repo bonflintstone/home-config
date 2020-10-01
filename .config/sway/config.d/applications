@@ -1,5 +1,5 @@
 set $menu albert show
-set $term alacritty
+set $term /home/bonflintstone/.cargo/bin/alacritty
 
 # hidpi workaround for some applications
 exec 'xrdb -load ~/.Xresources'

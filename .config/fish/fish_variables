@@ -1,6 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR ANDROID_HOME:/home/bonflintstone/\x2eandroid\x2dsdk/
+SETUVAR ANDROID_SDK_ROOT:/home/bonflintstone/\x2eandroid/Sdk
 SETUVAR --export EDITOR:vim
 SETUVAR NODE_ENV:development
 SETUVAR --path PATH:/home/bonflintstone/\x2eyarn/bin\x1e/home/bonflintstone/\x2ervm/gems/ruby\x2d2\x2e5\x2e3/bin\x1e/home/bonflintstone/\x2ervm/gems/ruby\x2d2\x2e5\x2e3\x40global/bin\x1e/home/bonflintstone/\x2ervm/rubies/ruby\x2d2\x2e5\x2e3/bin\x1e/home/bonflintstone/\x2envm/versions/node/v8\x2e16\x2e0/bin\x1e/snap/bin/\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/sbin\x1e/usr/bin\x1e/sbin\x1e/bin\x1e/usr/games\x1e/usr/local/games\x1e/home/bonflintstone/\x2ervm/bin
@@ -62,4 +63,4 @@ SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_user_paths:/snap/bin\x1e/home/bonflintstone/\x2eandroid\x2dsdk/platform\x2dtools/\x1e/home/bonflintstone/\x2eandroid\x2dsdk/tools/\x1e/home/bonflintstone/\x2eandroid\x2dsdk/emulator/\x1e/home/bonflintstone/\x2eandroid\x2dsdk/tools/bin/
+SETUVAR fish_user_paths:/snap/bin\x1e/home/bonflintstone/\x2eandroid/Sdk/emulator\x1e/home/bonflintstone/\x2eandroid\x2dsdk/platform\x2dtools\x1e/home/bonflintstone/\x2eandroid\x2dsdk/tools\x1e/home/bonflintstone/\x2eandroid\x2dsdk/tools/bin

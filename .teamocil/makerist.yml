@@ -1,6 +1,6 @@
 name: makerist
 windows:
-  - name: partner portal
+  - name: mpp
     root: ~/Projects/makerist/partner-portal
     layout: '9112,174x52,0,0[174x39,0,0,25,174x12,0,40{75x12,0,40,26,25x12,76,40,36,22x12,102,40,27,24x12,125,40,28,24x12,150,40,29}]'
     panes:
@@ -11,7 +11,7 @@ windows:
       - cd ~; cd -; bin/webpack-dev-server
       - cd ~; cd -; rs -p 2000
 
-  - name: makerist
+  - name: main
     root: ~/Projects/makerist/makerist
     layout: '214c,166x54,0,0[166x40,0,0,9,166x13,0,41{89x13,0,41,10,20x13,90,41,11,27x13,111,41,12,27x13,139,41,17}]'
     panes:
@@ -20,3 +20,13 @@ windows:
       - cd ~; cd -;
       - cd ~; cd -; bin/webpack-dev-server
       - cd ~; cd -; rs
+
+  - name: ar-app
+    root: ~/Projects/makerist/ar-app
+    layout: '214c,166x54,0,0[166x40,0,0,9,166x13,0,41{89x13,0,41,10,20x13,90,41,11,27x13,111,41,12,27x13,139,41,17}]'
+    panes:
+      - cd ~; cd -; vim
+      - cd ~; cd -; ''
+      - cd ~; cd -;
+      - cd ~; cd -;
+      - cd ~; cd -;

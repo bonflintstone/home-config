@@ -14,17 +14,15 @@ Plug 'ap/vim-css-color'
 Plug 'jeffkreeftmeijer/vim-dim'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
+Plug 'slim-template/vim-slim'
 
 " Essential
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy finder
-Plug 'w0rp/ale' " linter
 Plug 'tpope/vim-fugitive' " git
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'airblade/vim-gitgutter' " git sidebar
 Plug 'tpope/vim-eunuch' " File command, renaming, deleting, etc
 Plug 'ryanoasis/vim-devicons' " Nice icons
-
-" Experimental
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
  
 call plug#end()
 
@@ -34,10 +32,10 @@ set noswapfile
 set ignorecase smartcase
 set mouse=a
 set backupcopy=yes
+set signcolumn="yes:1"
 
 syntax on
-colo dim
-highlight Search cterm=underline
+" colo dim
 let g:netrw_banner = 0
 
 " for ctrlp
@@ -52,9 +50,7 @@ nnoremap <leader>v :vsp
 nnoremap <leader>t :tabe
 nnoremap <leader>r :syntax sync minlines=2000
 nnoremap <leader>n :noh
-nnoremap <leader>b :term ++curwin tb
-nnoremap <leader>o :e ~/Documents/org/my.org
-nnoremap <leader>x :Utl
+nnoremap <leader>f :CocFix
 
 au BufNewFile,BufRead *.jbuilder set ft=ruby
 au BufNewFile,BufRead *Thorfile set ft=ruby
@@ -73,16 +69,14 @@ au BufNewFile,BufRead *.txt :setlocal spell spelllang=en_us
 imap jk <Esc>
 imap kj <Esc>
 
-let g:ctrlp_working_path_mode = ''
 let g:ctrlp_show_hidden = 1
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v(git|hg|svn|node_modules|bower_components|tmp)$',
-  \ }
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+let g:ctrlp_use_caching = 1
 
-let g:ale_linters = {'javascript': ['eslint', 'prettier_eslint'], 'vue': ['prettier'], 'ruby': ['rubocop']}
-let g:ale_fixers = {'javascript': ['eslint', 'prettier_eslint'], 'typescript': ['eslint', 'prettier_eslint'], 'vue': ['prettier'], 'ruby': ['rubocop']}
-let g:ale_fix_on_save = 1
+let g:gitgutter_sign_column_always = 1
 
+highlight Search cterm=underline
 highlight GitGutterAdd    ctermfg=2
 highlight GitGutterChange ctermfg=3
 highlight GitGutterDelete ctermfg=1
+highlight SignColumn ctermbg=none
