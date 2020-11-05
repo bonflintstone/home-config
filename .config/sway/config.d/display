@@ -19,7 +19,4 @@ output $laptop {
 
 bindswitch --locked lid:on\
   exec $swaylock_command,\
-  output '*' disable
-
-bindswitch --locked lid:off\
-  output '*' enable
+  exec systemctl suspend

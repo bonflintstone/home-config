@@ -1,12 +1,16 @@
 ### Variables
-#
-# Logo key. Use Mod1 for Alt.
+
+# Using windows as mod key
 set $mod Mod4
+
 # Home row direction keys, like vim
 set $left h
 set $down j
 set $up k
 set $right l
+
+# screenshot stuff
+set $screenshot '/home/bonflintstone/.local/bin/grimshot'
 
 ### Key bindings
 #
@@ -35,10 +39,8 @@ set $right l
     bindsym $mod+Shift+q exec $swaylock_command
 
     # Making Screenshots
-    bindsym Print exec $screenshot
-    bindsym Shift+Print exec $screenshot_area
-    bindsym Alt+Print exec $screenshot_clip
-    bindsym Alt+Shift+Print exec $screenshot_area_clip
+    bindsym Print exec $screenshot copy area
+    bindsym Shift+Print exec $screenshot save area
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
