@@ -6,19 +6,14 @@
 !.vimrc
 !.zshrc
 !.gitignore
-!.scripts
-!.scripts/*
 !.eslintrc.js
 !.global-gitignore
 !.rvmrc
-!.taskbook.json
 
 !.config
 .config/*
 !.config/tmuxinator/
 !.config/tmuxinator/*
-!.config/terminator/
-!.config/terminator/*
 !.config/libinput-gestures.conf
 !.config/fish/
 !.config/fish/**/*
@@ -40,9 +35,3 @@
 !.ssh/
 !.ssh/config
 !.prettierrc
-
-!.todo-txt/
-!.todo-txt/*
-
-!.todo/
-!.todo/*
