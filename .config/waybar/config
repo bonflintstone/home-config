@@ -9,10 +9,13 @@
         "sway/mode",
         "sway/window"
     ],
+    "modules-center": [
+        "tray"
+    ],
     "modules-right": [
         "custom/scratchpad",
-        "tray",
         "pulseaudio",
+        "network",
         "cpu",
         "backlight",
         "custom/battery",
@@ -31,9 +34,8 @@
         "spacing": 5
     },
     "clock": {
-        "format": "{:%H:%M:%S %p}",
-        "format-alt": "{:%a, %b %d | %H:%M:%S %p}",
-        "interval": 1
+        "format": "{:%a, %b %d | %H:%M %p}",
+        "interval": 60
     },
     "backlight": {
         "format": "🔆 {}%",
@@ -42,6 +44,14 @@
     },
     "cpu": {
         "format": "🤖 {usage}%"
+    },
+    "network": {
+        "interface": "wlp60s0",
+        "format": "ifname",
+        "format-wifi": "📶 {signalStrength}%",
+        "format-disconnected": "🚫",
+        "tooltip-format": "{essid}",
+        "on-click": "gnome-control-center wifi"
     },
     "custom/battery": {
         "format": "🔋{}",
