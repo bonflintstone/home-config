@@ -1,0 +1,31 @@
+[calendars]
+
+[[personal_local]]
+path = ~/.calendars/personal/*
+type = discover
+color = dark blue
+
+[[railslove_local]]
+path = ~/.calendars/railslove
+type = discover
+readonly = True
+color = dark green
+
+[[timetastic_local]]
+path = ~/.calendars/timetastic
+type = discover
+readonly = True
+color = dark red
+
+[[uni_local]]
+path = ~/.calendars/uni
+type = discover
+readonly = True
+color = brown
+
+[locale]
+timeformat = %H:%M
+dateformat = %Y-%m-%d
+longdateformat = %Y-%m-%d
+datetimeformat = %Y-%m-%d %H:%M
+longdatetimeformat = %Y-%m-%d %H:%M

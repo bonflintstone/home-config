@@ -28,6 +28,8 @@
 !.config/waybar/**/*
 !.config/nvim
 !.config/nvim/**/*
+!.config/khal
+!.config/khal/**/*
 
 !.teamocil/
 !.teamocil/*
