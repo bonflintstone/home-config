@@ -3,16 +3,17 @@ set $portable DP-1
 set $portable2 DP-2
 
 output $portable2 {
-  pos 1500 0
+  pos 1080 0
   scale 1.0
 }
 output $portable {
-  pos 1500 0
-  scale 1.0
+  pos 0 0
+  scale 2
+  transform 270
 }
 
 output $laptop {
-  pos 0 0
+  pos 4520 0
   scale 2
   # dpms off
 }
