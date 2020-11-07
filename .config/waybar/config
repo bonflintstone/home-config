@@ -35,7 +35,7 @@
         "spacing": 5
     },
     "clock": {
-        "format": "{:%a, %b %d | %H:%M %p}",
+        "format": "{:%a %m-%d %H:%M %p}",
         "interval": 60
     },
     "backlight": {
@@ -55,10 +55,10 @@
         "on-click": "gnome-control-center wifi"
     },
     "custom/battery": {
-        "format": "🔋{}",
-        "exec": "acpi | grep -v 'unavailable' | cut -d ',' -f2,3 | sed 's/:[0-9][0-9] /h /'",
-        "interval": 5,
-        "tooltip-format": "{}"
+        "format": "{}",
+        "exec": ".config/waybar/custom/battery.bash",
+        "return-type": "json",
+        "interval": 15
     },
     "custom/scratchpad": {
         "format": "🗒️ [{}]",
@@ -67,20 +67,12 @@
         "tooltip-format": "{}"
     },
     "custom/khal": {
-        "format": "📅 {} today",
+        "format": "📅 {}",
         "exec": ".config/waybar/custom/cal.bash",
         "return-type": "json",
         "interval": 60,
         "tooltip": true,
         "on-click": ".cargo/bin/alacritty -e ikhal"
-    },
-    "battery": {
-        "states": {
-            "warning": 30,
-            "critical": 10
-        },
-        "format": "{capacity}% {icon}",
-        "format-icons": [" ", " ", " ", " ", " "]
     },
     "pulseaudio": {
         "scroll-step": 1,
