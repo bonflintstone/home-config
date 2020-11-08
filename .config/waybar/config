@@ -52,7 +52,7 @@
         "format-wifi": "📶 {signalStrength}%",
         "format-disconnected": "🚫",
         "tooltip-format": "{essid}",
-        "on-click": "gnome-control-center wifi"
+        "on-click": ".cargo/bin/alacritty -e nmtui"
     },
     "custom/battery": {
         "format": "{}",

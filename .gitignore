@@ -30,6 +30,8 @@
 !.config/nvim/**/*
 !.config/khal
 !.config/khal/**/*
+!.config/alacritty
+!.config/alacritty/**/*
 
 !.teamocil/
 !.teamocil/*
