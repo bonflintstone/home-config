@@ -1,4 +1,4 @@
-set $menu albert show
+set $menu ulauncher
 set $term /home/bonflintstone/.cargo/bin/alacritty
 
 # hidpi workaround for some applications
@@ -8,4 +8,4 @@ exec 'mako --default-timeout 10000'
 exec 'libinput-gestures-setup restart'
 exec 'nextcloud --background'
 exec 'swaymsg exec /home/bonflintstone/.config/sway/background_changer'
-exec 'albert'
+exec 'ulauncher --hide-window'

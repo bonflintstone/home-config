@@ -13,7 +13,7 @@ output $portable {
 }
 
 output $laptop {
-  pos 4520 0
+  pos 4520 440
   scale 2
   # dpms off
 }

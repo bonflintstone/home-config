@@ -138,6 +138,19 @@ set $screenshot '/home/bonflintstone/.local/bin/grimshot'
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+minus scratchpad show
 #
+# Displays:
+#
+
+bindsym $mod+Ctrl+1 output $portable dpms off
+bindsym $mod+Ctrl+2 output $portable2 dpms off
+bindsym $mod+Ctrl+3 output $laptop dpms off
+bindsym $mod+Ctrl+Shift+1 output $portable dpms on
+bindsym $mod+Ctrl+Shift+2 output $portable2 dpms on
+bindsym $mod+Ctrl+Shift+3 output $laptop dpms on
+bindsym $mod+Ctrl+0 output '*' dpms off
+bindsym $mod+Ctrl+Shift+0 output '*' dpms on
+
+#
 # Resizing containers:
 #
 mode "resize" {
