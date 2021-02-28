@@ -1,5 +1,5 @@
 set $menu ulauncher
-set $term /home/bonflintstone/.cargo/bin/alacritty
+set $term alacritty
 
 # hidpi workaround for some applications
 exec 'xrdb -load ~/.Xresources'
@@ -7,5 +7,5 @@ exec 'xrdb -load ~/.Xresources'
 exec 'mako --default-timeout 10000'
 exec 'libinput-gestures-setup restart'
 exec 'nextcloud --background'
-exec 'swaymsg exec /home/bonflintstone/.config/sway/background_changer'
 exec 'ulauncher --hide-window'
+exec 'gammastep-indicator'

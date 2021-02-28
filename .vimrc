@@ -15,9 +15,12 @@ Plug 'jeffkreeftmeijer/vim-dim'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'slim-template/vim-slim'
+Plug 'dart-lang/dart-vim-plugin'
 
 " Essential
-Plug 'ctrlpvim/ctrlp.vim' " fuzzy finder
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'tpope/vim-fugitive' " git
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'airblade/vim-gitgutter' " git sidebar
@@ -39,9 +42,6 @@ syntax on
 " colo dim
 let g:netrw_banner = 0
 
-" for ctrlp
-set wildignore+=*/tmp/*,*.so,*.swp,*.zi,*/node_modules/*,*/bower_components/*,*.class,*/.next/*
-
 let mapleader = ' '
 nnoremap <leader>e :e %:p:h
 nnoremap <leader>q :q
@@ -52,6 +52,10 @@ nnoremap <leader>t :tabe
 nnoremap <leader>r :syntax sync minlines=2000
 nnoremap <leader>n :noh
 nnoremap <leader>f :CocFix
+nnoremap  <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>/ <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>a :CocAction
+nnoremap <leader>c :CocCommand
 
 au BufNewFile,BufRead *.jbuilder set ft=ruby
 au BufNewFile,BufRead *Thorfile set ft=ruby
@@ -69,10 +73,6 @@ au BufNewFile,BufRead *.txt :setlocal spell spelllang=en_us
 
 imap jk <Esc>
 imap kj <Esc>
-
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-let g:ctrlp_use_caching = 1
 
 let g:gitgutter_sign_column_always = 1
 
@@ -96,3 +96,14 @@ let g:firenvim_config = {
         \ },
     \ }
     \ }
+
+lua << EOF
+  require('telescope').setup{
+    defaults = {
+      file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
+      grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new,
+      qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new,
+      file_ignore_patterns = { "ios/*", "android/*" },
+    }
+  }
+EOF

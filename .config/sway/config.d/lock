@@ -1,4 +1,4 @@
 set $swaylock_command sh -c '\
-  swaylock --image /home/bonflintstone/Pictures/wallpapers/mountain.jpg --ignore-empty-password;\
+  swaylock --image /home/bonflintstone/Pictures/wallpapers/climbing1.jpg --ignore-empty-password;\
   sleep 0.1;\
   '
