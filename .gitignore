@@ -32,6 +32,8 @@
 !.config/khal/**/*
 !.config/alacritty
 !.config/alacritty/**/*
+!.config/systemd/
+!.config/systemd/**/*
 
 !.teamocil/
 !.teamocil/*

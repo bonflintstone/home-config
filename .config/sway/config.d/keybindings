@@ -10,7 +10,7 @@ set $up k
 set $right l
 
 # screenshot stuff
-set $screenshot '/home/bonflintstone/.local/bin/grimshot'
+set $screenshot '/usr/share/sway-hidpi-git/scripts/grimshot'
 
 ### Key bindings
 #

@@ -47,7 +47,7 @@
         "format": "🤖 {usage}%"
     },
     "network": {
-        "interface": "wlp60s0",
+        "interface": "wlan0",
         "format": "ifname",
         "format-wifi": "📶 {signalStrength}%",
         "format-disconnected": "🚫",

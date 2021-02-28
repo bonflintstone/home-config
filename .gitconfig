@@ -1,7 +1,7 @@
 [user]
 	name = Bonflintstone
 	email = freddy@railslove.com
-	signingkey = 08476215594F2749
+	signingkey = 528F2EECB81B53BA8CB507018C695AFC132419F8
 [core]
 	autocrlf = false
 	excludesfile = /home/bonflintstone/.global-gitignore

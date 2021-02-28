@@ -1,9 +1,11 @@
 default_border pixel 10
 smart_borders on
 
-output "*" bg /home/bonflintstone/Pictures/wallpapers/lionello-delpiccolo-uJfwRhfgSnw-unsplash.jpg fill
+output "*" bg /home/bonflintstone/Pictures/wallpapers/climbing1.jpg fill
 
 client.focused #00000000 #00000000 #FFFFFFFF #00000000 #00000000
 client.unfocused #00000000 #00000000 #AAAAAAFF #00000000 #00000000
 client.urgent #00000000 #00000000 #AAAAAAFF #00000000 #00000000
 client.focused_inactive #00000000 #00000000 #CCCCCCFF #00000000 #00000000
+
+font pango:SourceCodePro Medium 11
