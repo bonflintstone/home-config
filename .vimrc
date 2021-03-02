@@ -57,6 +57,9 @@ nnoremap <leader>/ <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>a :CocAction
 nnoremap <leader>c :CocCommand
 
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gr <Plug>(coc-references)
+
 au BufNewFile,BufRead *.jbuilder set ft=ruby
 au BufNewFile,BufRead *Thorfile set ft=ruby
 au BufNewFile,BufRead *Fastfile set ft=ruby
@@ -101,8 +104,6 @@ lua << EOF
   require('telescope').setup{
     defaults = {
       file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
-      grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new,
-      qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new,
       file_ignore_patterns = { "ios/*", "android/*" },
     }
   }

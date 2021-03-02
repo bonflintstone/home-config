@@ -12,3 +12,6 @@ for_window [title="TelegramDesktop"]{ \
 
 xwayland force scale 2
 exec xsettingsd
+
+for_window [title="alacritty floating"] floating true
+for_window [title="Volume Control"] floating true

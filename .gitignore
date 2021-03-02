@@ -34,6 +34,8 @@
 !.config/alacritty/**/*
 !.config/systemd/
 !.config/systemd/**/*
+!.config/mako/
+!.config/mako/**/*
 
 !.teamocil/
 !.teamocil/*

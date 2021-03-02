@@ -10,10 +10,8 @@
         "sway/window",
         "custom/scratchpad"
     ],
-    "modules-center": [
-        "tray"
-    ],
     "modules-right": [
+        "tray",
         "custom/khal",
         "pulseaudio",
         "network",
@@ -35,24 +33,25 @@
         "spacing": 5
     },
     "clock": {
-        "format": "{:%a %m-%d %H:%M %p}",
+        "format": "{:%H:%M}",
+        "tooltip-format": "{:%a %d.%m.%Y %H:%M}",
         "interval": 60
     },
     "backlight": {
-        "format": "🔆 {}%",
+        "format": "🔆 {}",
         "on-scroll-down": "brightnessctl set 4%- -n 1%",
         "on-scroll-up": "brightnessctl set +4%"
     },
     "cpu": {
-        "format": "🤖 {usage}%"
+        "format": "🤖 {usage}"
     },
     "network": {
         "interface": "wlan0",
         "format": "ifname",
-        "format-wifi": "📶 {signalStrength}%",
+        "format-wifi": "📶 {signalStrength}",
         "format-disconnected": "🚫",
         "tooltip-format": "{essid}",
-        "on-click": "gnome-control-center wifi"
+        "on-click": "alacritty -t 'alacritty floating' -e nmtui"
     },
     "custom/battery": {
         "format": "{}",
@@ -72,12 +71,12 @@
         "return-type": "json",
         "interval": 60,
         "tooltip": true,
-        "on-click": ".cargo/bin/alacritty -e ikhal"
+        "on-click": "alacritty -t 'alacritty floating' -e ikhal"
     },
     "pulseaudio": {
         "scroll-step": 1,
-        "format": "{icon} {volume}%",
-        "format-bluetooth": " {volume}%",
+        "format": "{icon} {volume}",
+        "format-bluetooth": " {volume}",
         "format-muted": "🔇",
         "format-icons": {
             "headphones": "🎧",
