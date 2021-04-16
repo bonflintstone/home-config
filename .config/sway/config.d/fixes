@@ -10,6 +10,7 @@ for_window [title="TelegramDesktop"]{ \
   floating enable \
 }
 
+# For use with sway-hidpi-git
 xwayland force scale 2
 exec xsettingsd
 

@@ -26,17 +26,20 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'airblade/vim-gitgutter' " git sidebar
 Plug 'tpope/vim-eunuch' " File command, renaming, deleting, etc
 Plug 'ryanoasis/vim-devicons' " Nice icons
+
+" Trying
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } } " Vim in the browser
  
 call plug#end()
 
 set expandtab tabstop=2 softtabstop=0 shiftwidth=2 smarttab hlsearch splitbelow splitright
-set smartindent autoindent
 set noswapfile
 set ignorecase smartcase
 set mouse=a
 set backupcopy=yes
 set signcolumn="yes:1"
+set smartindent autoindent
+set undofile
 
 syntax on
 " colo dim
@@ -46,9 +49,6 @@ let mapleader = ' '
 nnoremap <leader>e :e %:p:h
 nnoremap <leader>q :q
 nnoremap <leader>w :w
-nnoremap <leader>s :sp
-nnoremap <leader>v :vsp
-nnoremap <leader>t :tabe
 nnoremap <leader>r :syntax sync minlines=2000
 nnoremap <leader>n :noh
 nnoremap <leader>f :CocFix
@@ -56,6 +56,7 @@ nnoremap  <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>/ <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>a :CocAction
 nnoremap <leader>c :CocCommand
+nnoremap <leader>f <cmd>lua require('telescope.builtin').quickfix()<cr>
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)

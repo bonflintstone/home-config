@@ -6,7 +6,7 @@ windows:
     panes:
       - vim
       - ''
-      - docker-compose up
+      - cd ..; docker-compose up
       - bin/webpack-dev-server
       - rs
 
