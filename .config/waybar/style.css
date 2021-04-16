@@ -1,35 +1,42 @@
 * {
-    border: none;
-    border-radius: 0;
-    font-family: "Ubuntu Mono Nerd Font Complete Mono";
-    font-size: 15px;
-    min-height: 0;
+  border: none;
+  border-radius: 0;
+  font-family: "Ubuntu Mono Nerd Font Complete Mono";
+  font-size: 15px;
+  min-height: 0;
 }
 
 window#waybar {
-    background: rgba(0.2, 0.2, 0.2, 0.4);
-    color: #CCC;
+  background: transparent;
+  color: #CCC;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strang
+e-hover-effect */
 #workspaces button {
-    padding: 0 5px;
-    background: transparent;
-    color: #CCC;
-    border-bottom: 2px solid transparent;
+  padding: 0 5px;
+  background: transparent;
+  color: #CCC;
+  border-bottom: 2px solid transparent;
 }
 
 #workspaces button.focused {
-    border-bottom: 2px solid #BBBBBB;
+  border-bottom: 2px solid #BBBBBB;
 }
 
 #mode {
-    background: #64727D;
+  background: #64727D;
 }
 
 #clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-battery, #mode, #idle_inhibitor, #custom-khal {
-    padding: 0 5px 0 5px;
-    border-left: 1px solid #555
+  padding: 0 5px;
+  margin-left: 2px;
+  background-color: rgba(10, 10, 10, 0.2);
+}
+
+#tray {
+  padding: 0 5px 0 5px;
+  background-color: transparent;
 }
 
 #custom-scratchpad {
@@ -37,6 +44,7 @@ window#waybar {
 }
 
 #clock {
+  padding-top: 6px;
 }
 
 #window {
@@ -50,20 +58,20 @@ window#waybar {
 }
 
 @keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: #000000;
-    }
+  to {
+    background-color: #ffffff;
+    color: #000000;
+  }
 }
 
 #battery.critical:not(.charging) {
-    background: #f53c3c;
-    color: #ffffff;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  background: #f53c3c;
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 #cpu {
@@ -94,11 +102,6 @@ window#waybar {
 }
 
 #temperature.critical {
-}
-
-#tray {
-  padding-left: 10px;
-  padding-right: 10px;
 }
 
 #idle_inhibitor {

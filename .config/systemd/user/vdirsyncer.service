@@ -7,6 +7,3 @@ Type=simple
 ExecStart=/usr/bin/vdirsyncer sync
 RuntimeMaxSec=3m
 Restart=on-failure
-
-[Install]
-WantedBy=default.target
