@@ -17,8 +17,8 @@ type = discover
 readonly = True
 color = dark red
 
-[[uni_local]]
-path = ~/.calendars/uni
+[[abb_outlook_local]]
+path = ~/.calendars/abb_outlook
 type = discover
 readonly = True
 color = brown
