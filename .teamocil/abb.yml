@@ -2,13 +2,13 @@ name: abb
 windows:
   - name: fleetdog
     root: ~/Projects/abb/fleetdog
-    layout: 'e339,166x49,0,0[166x35,0,0,18,166x13,0,36{82x13,0,36,20,27x13,83,36,21,27x13,111,36,23,27x13,139,36,22}]'
+    layout: 'e7f4,166x49,0,0[166x35,0,0,18,166x13,0,36{82x13,0,36,20,41x13,83,36,21,41x13,125,36,22}]'
     panes:
       - vim
       - ''
-      - cd ..; docker-compose up
-      - bin/webpack-dev-server
-      - rs
+      - commands:
+        - docker-compose -f docker-compose-all.yml down && docker-compose -f docker-compose-all.yml up --build -d
+        - docker attach fleetdog_app_1
 
   - name: main
     root: ~/Projects/abb/fleetbee
@@ -16,4 +16,4 @@ windows:
     panes:
       - vim
       - ''
-      - emulator @pixel -dns-server 8.8.8.8
+      - ''

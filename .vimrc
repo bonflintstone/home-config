@@ -29,6 +29,7 @@ Plug 'ryanoasis/vim-devicons' " Nice icons
 
 " Trying
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } } " Vim in the browser
+Plug 'ngmy/vim-rubocop'
  
 call plug#end()
 
@@ -56,10 +57,23 @@ nnoremap  <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>/ <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>a :CocAction
 nnoremap <leader>c :CocCommand
+nnoremap <leader>s yiw:CocSearch "
 nnoremap <leader>f <cmd>lua require('telescope.builtin').quickfix()<cr>
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
+nmap <silent> <RIGHT> :cnext<CR>
+nmap <silent> <LEFT> :cprev<CR>
+nmap <silent> <UP> :copen<CR>
+nmap <silent> <DOWN> :cclose<CR>
+
+" Best silver searcher setup
+if executable('ag') 
+  " Note we extract the column as well as the file and line number
+  set grepprg=ag\ --nogroup\ --nocolor\ --column
+  set grepformat=%f:%l:%c%m
+endif
+
 
 au BufNewFile,BufRead *.jbuilder set ft=ruby
 au BufNewFile,BufRead *Thorfile set ft=ruby
@@ -86,6 +100,7 @@ highlight GitGutterChange ctermfg=3
 highlight GitGutterDelete ctermfg=1
 highlight SignColumn ctermbg=none
 
+set guifont=Fira_Code:h22 " for firenvim
 let g:firenvim_config = {
     \ 'globalSettings': {
         \ 'alt': 'all',

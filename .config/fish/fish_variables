@@ -10,6 +10,8 @@ SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_be:bundle\x20exec
+SETUVAR _fish_abbr_da:docker\x2dcompose\x20\x2df\x20docker\x2dcompose\x2dall\x2eyml
+SETUVAR _fish_abbr_dar:docker\x2dcompose\x20\x2df\x20docker\x2dcompose\x2dall\x2eyml\x20run\x20app
 SETUVAR _fish_abbr_ga:git\x20add
 SETUVAR _fish_abbr_gall:git\x20add\x20\x2d\x2dall
 SETUVAR _fish_abbr_gb:git\x20branch
@@ -27,7 +29,7 @@ SETUVAR _fish_abbr_rt:todo\x2dtxt\x20\x2dd\x20\x2etodo/railslove\x2econfig
 SETUVAR _fish_abbr_rtodo:vim\x20\x7e/Nextcloud/Other/todo\x2dtxt/railslove\x2etodo\x2etxt
 SETUVAR _fish_abbr_rtt:todo\x2dtxt\x20\x2dd\x20\x7e/\x2etodo/railslove\x2econfig\x20ls
 SETUVAR _fish_abbr_t:todo\x2dtxt
-SETUVAR _fish_abbr_tm:teamocil
+SETUVAR _fish_abbr_tm:teamocil\x20\x2d\x2dhere
 SETUVAR _fish_abbr_todo:vim\x20\x7e/Nextcloud/Other/todo\x2dtxt/todo\x2etxt
 SETUVAR _fish_abbr_tt:todo\x2dtxt\x20ls
 SETUVAR dangerous_nocmdhist:c\x1ed\x1ell\x1els\x1em\x1es
