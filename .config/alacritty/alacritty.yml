@@ -60,7 +60,7 @@ window:
   #
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
-  startup_mode: Windowed
+  startup_mode: Maximized
 
   # Window title
   #title: Alacritty
@@ -92,19 +92,19 @@ scrolling:
 # Font configuration (changes require restart)
 font:
   normal:
-    family: Fantasque Sans Mono
+    family: Hack Nerd Font Mono
     style: Regular
 
   bold:
-    family: Fantasque Sans Mono
+    family: Hack Nerd Font Mono
     style: Bold
 
   italic:
-    family: Fantasque Sans Mono
+    family: Hack Nerd Font Mono
     style: Italic
 
   # Point size
-  size: 13.0
+  size: 14.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -237,7 +237,9 @@ live_config_reload: true
 #   - (Linux) user login shell
 #   - (Windows) powershell
 shell:
-  program: /usr/bin/tmux
+  program: /opt/homebrew/bin/fish
+  args:
+    - --command="/opt/homebrew/bin/tmux" 
 
 # Startup directory
 #

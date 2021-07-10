@@ -1,8 +1,0 @@
-package bass
-package foreign-env
-package nvm
-package rbenv
-package yarn-binpath
-package z
-theme default
-theme l
