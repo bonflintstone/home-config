@@ -71,6 +71,8 @@ window:
   # Allow terminal applications to change Alacritty's window title.
   dynamic_title: true
 
+  opacity: .85
+
 scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
@@ -168,12 +170,6 @@ colors:
     magenta: '0xd3869b'
     cyan:    '0x8ec07c'
     white:   '0xebdbb2'
-
-# Background opacity
-#
-# Window opacity as a floating point number from `0.0` to `1.0`.
-# The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: .85
 
 # Mouse bindings
 #
