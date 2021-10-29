@@ -21,15 +21,19 @@ Plug 'dart-lang/dart-vim-plugin'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'tami5/sql.nvim'
+Plug 'nvim-telescope/telescope-smart-history.nvim'
 Plug 'tpope/vim-fugitive' " git
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'airblade/vim-gitgutter' " git sidebar
 Plug 'tpope/vim-eunuch' " File command, renaming, deleting, etc
 Plug 'ryanoasis/vim-devicons' " Nice icons
+Plug 'ngmy/vim-rubocop'
 
 " Trying
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } } " Vim in the browser
-Plug 'ngmy/vim-rubocop'
+Plug 'jeetsukumaran/vim-indentwise'
+Plug 'airblade/vim-localorie' " yaml stuff
  
 call plug#end()
 
@@ -50,15 +54,21 @@ let mapleader = ' '
 nnoremap <leader>e :e %:p:h
 nnoremap <leader>q :q
 nnoremap <leader>w :w
-nnoremap <leader>r :syntax sync minlines=2000
 nnoremap <leader>n :noh
 nnoremap <leader>f :CocFix
 nnoremap  <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>/ <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>* yiw<cmd>lua require('telescope.builtin').live_grep()<cr>"
 nnoremap <leader>a :CocAction
 nnoremap <leader>c :CocCommand
-nnoremap <leader>s yiw:CocSearch "
+nnoremap <leader>s yiw:grep " app/**/*
+nnoremap <leader>sa yiw:grep " **/*
 nnoremap <leader>f <cmd>lua require('telescope.builtin').quickfix()<cr>
+nnoremap <leader>r :RuboCop
+nnoremap <leader>ra :RuboCop -A
+nnoremap <leader>rr :RuboCop .
+nnoremap <leader>rra :RuboCop -A .
+nnoremap <leader>t :call localorie#translate()<cr>
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
@@ -100,6 +110,10 @@ highlight GitGutterChange ctermfg=3
 highlight GitGutterDelete ctermfg=1
 highlight SignColumn ctermbg=none
 
+autocmd CursorMoved *.yml echo localorie#expand_key()
+
+let g:vimrubocop_rubocop_cmd = 'bundle exec rubocop '
+
 set guifont=Fira_Code:h22 " for firenvim
 let g:firenvim_config = {
     \ 'globalSettings': {
@@ -119,8 +133,22 @@ let g:firenvim_config = {
 lua << EOF
   require('telescope').setup{
     defaults = {
-      file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
+      file_previewer = require('telescope.previewers').vim_buffer_cat.new,
       file_ignore_patterns = { "ios/*", "android/*" },
-    }
+      history = {
+        path = '~/.local/share/nvim/databases/telescope_history.sqlite3',
+        limit = 100,
+      },
+      mappings = {
+        i = {
+          ["<C-P>"] = require('telescope.actions').cycle_history_prev,
+          ["<C-N>"] = require('telescope.actions').cycle_history_next,
+          ["<C-J>"] = require('telescope.actions').move_selection_next,
+          ["<C-K>"] = require('telescope.actions').move_selection_previous,
+        },
+      },
+    },
   }
+
+  require('telescope').load_extension('smart_history')
 EOF
