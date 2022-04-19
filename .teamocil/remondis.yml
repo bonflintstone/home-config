@@ -1,0 +1,22 @@
+name: abb
+windows:
+  - name: remondis frontend
+    root: ~/Projects/remondis/binity-app
+    layout: 'e7f4,166x49,0,0[166x35,0,0,18,166x13,0,36{82x13,0,36,20,41x13,83,36,21,41x13,125,36,22}]'
+    panes:
+      - vim
+      - ''
+      - yarn serve
+
+  - name: remondis backend
+    root: ~/Projects/remondis/binity-api
+    layout: 'e5b5,179x51,0,0[179x36,0,0,4,179x14,0,37{89x14,0,37,5,22x14,90,37,6,21x14,113,37,8,22x14,135,37,7,21x14,158,37,9}]'
+    panes:
+      - vim
+      - ''
+      - bin/webpack-dev-server
+      - sidekiq
+      - rails s
+      - commands:
+        - cd ..
+        - docker compose up

@@ -29,11 +29,15 @@ Plug 'airblade/vim-gitgutter' " git sidebar
 Plug 'tpope/vim-eunuch' " File command, renaming, deleting, etc
 Plug 'ryanoasis/vim-devicons' " Nice icons
 Plug 'ngmy/vim-rubocop'
+Plug 'airblade/vim-localorie' " yaml stuff
 
 " Trying
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } } " Vim in the browser
 Plug 'jeetsukumaran/vim-indentwise'
-Plug 'airblade/vim-localorie' " yaml stuff
+Plug 'prettier/vim-prettier'
+Plug 'othree/html5.vim'
+Plug 'dewyze/vim-ruby-block-helpers' " ruby block level navigation
  
 call plug#end()
 
@@ -42,7 +46,6 @@ set noswapfile
 set ignorecase smartcase
 set mouse=a
 set backupcopy=yes
-set signcolumn="yes:1"
 set smartindent autoindent
 set undofile
 
@@ -63,7 +66,7 @@ nnoremap <leader>a :CocAction
 nnoremap <leader>c :CocCommand
 nnoremap <leader>s yiw:grep " app/**/*
 nnoremap <leader>sa yiw:grep " **/*
-nnoremap <leader>f <cmd>lua require('telescope.builtin').quickfix()<cr>
+nnoremap <leader>f :call CocActionAsync('format')<cr>
 nnoremap <leader>r :RuboCop
 nnoremap <leader>ra :RuboCop -A
 nnoremap <leader>rr :RuboCop .
@@ -76,6 +79,8 @@ nmap <silent> <RIGHT> :cnext<CR>
 nmap <silent> <LEFT> :cprev<CR>
 nmap <silent> <UP> :copen<CR>
 nmap <silent> <DOWN> :cclose<CR>
+" copy current file path with 'cp'
+nmap <silent> cp :let @+ = expand("%")<CR>
 
 " Best silver searcher setup
 if executable('ag') 
@@ -133,7 +138,6 @@ let g:firenvim_config = {
 lua << EOF
   require('telescope').setup{
     defaults = {
-      file_previewer = require('telescope.previewers').vim_buffer_cat.new,
       file_ignore_patterns = { "ios/*", "android/*" },
       history = {
         path = '~/.local/share/nvim/databases/telescope_history.sqlite3',
