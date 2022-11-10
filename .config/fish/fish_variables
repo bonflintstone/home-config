@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export DISABLE_SPRING:true
 SETUVAR --export EDITOR:nvim
 SETUVAR NODE_ENV:development
 SETUVAR --path PATH:/home/bonflintstone/\x2eyarn/bin\x1e/home/bonflintstone/\x2ervm/gems/ruby\x2d2\x2e5\x2e3/bin\x1e/home/bonflintstone/\x2ervm/gems/ruby\x2d2\x2e5\x2e3\x40global/bin\x1e/home/bonflintstone/\x2ervm/rubies/ruby\x2d2\x2e5\x2e3/bin\x1e/home/bonflintstone/\x2envm/versions/node/v8\x2e16\x2e0/bin\x1e/snap/bin/\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/sbin\x1e/usr/bin\x1e/sbin\x1e/bin\x1e/usr/games\x1e/usr/local/games\x1e/home/bonflintstone/\x2ervm/bin
@@ -11,7 +12,7 @@ SETUVAR Z_EXCLUDE:\x5e/Users/bonflintstone\x24
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
-SETUVAR __fish_initialized:3100
+SETUVAR __fish_initialized:3400
 SETUVAR _fish_abbr_be:bundle\x20exec
 SETUVAR _fish_abbr_da:docker\x20compose\x20\x2df\x20docker\x2dcompose\x2dall\x2eyml
 SETUVAR _fish_abbr_dar:docker\x20compose\x20\x2df\x20docker\x2dcompose\x2dall\x2eyml\x20run\x20app
@@ -73,6 +74,7 @@ SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
+SETUVAR fish_pager_color_selected_background:\x2dr
 SETUVAR fish_user_paths://Users/bonflintstone/\x2elocal/bin\x1e/Users/bonflintstone/Library/Android/sdk/platform\x2dtools\x1e/opt/homebrew/bin
 SETUVAR nvm_data:/Users/bonflintstone/\x2elocal/share/nvm
 SETUVAR nvm_mirror:https\x3a//nodejs\x2eorg/dist

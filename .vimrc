@@ -20,9 +20,10 @@ Plug 'dart-lang/dart-vim-plugin'
 " Essential
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
 Plug 'tami5/sql.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-smart-history.nvim'
+Plug 'nvim-telescope/telescope-github.nvim'
 Plug 'tpope/vim-fugitive' " git
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'airblade/vim-gitgutter' " git sidebar
@@ -30,6 +31,8 @@ Plug 'tpope/vim-eunuch' " File command, renaming, deleting, etc
 Plug 'ryanoasis/vim-devicons' " Nice icons
 Plug 'ngmy/vim-rubocop'
 Plug 'airblade/vim-localorie' " yaml stuff
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-rails'
 
 " Trying
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -38,7 +41,9 @@ Plug 'jeetsukumaran/vim-indentwise'
 Plug 'prettier/vim-prettier'
 Plug 'othree/html5.vim'
 Plug 'dewyze/vim-ruby-block-helpers' " ruby block level navigation
- 
+Plug 'yaegassy/coc-typeprof', { 'do': 'yarn install --frozen-lockfile' } 
+Plug 'pocke/rbs.vim'
+
 call plug#end()
 
 set expandtab tabstop=2 softtabstop=0 shiftwidth=2 smarttab hlsearch splitbelow splitright
@@ -48,6 +53,7 @@ set mouse=a
 set backupcopy=yes
 set smartindent autoindent
 set undofile
+set tw=120
 
 syntax on
 " colo dim
@@ -59,9 +65,10 @@ nnoremap <leader>q :q
 nnoremap <leader>w :w
 nnoremap <leader>n :noh
 nnoremap <leader>f :CocFix
-nnoremap  <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap  <cmd>lua require('telescope.builtin').find_files({ hidden = true, no_ignore = false })<cr>
 nnoremap <leader>/ <cmd>lua require('telescope.builtin').live_grep()<cr>
-nnoremap <leader>* yiw<cmd>lua require('telescope.builtin').live_grep()<cr>"
+nnoremap <leader>* yiw<cmd>lua require('telescope.builtin').live_grep()<cr><cmd><cr>"
+nnoremap <leader>g yiw<cmd>lua require('telescope').extensions.gh.pull_request()<cr>
 nnoremap <leader>a :CocAction
 nnoremap <leader>c :CocCommand
 nnoremap <leader>s yiw:grep " app/**/*
@@ -85,7 +92,7 @@ nmap <silent> cp :let @+ = expand("%")<CR>
 " Best silver searcher setup
 if executable('ag') 
   " Note we extract the column as well as the file and line number
-  set grepprg=ag\ --nogroup\ --nocolor\ --column
+  set grepprg=ag\ --nogroup\ --nocolor\ --column\ --hidden
   set grepformat=%f:%l:%c%m
 endif
 
@@ -98,6 +105,7 @@ au BufNewFile,BufRead *Jenkinsfile set ft=javascript
 au BufNewFile,BufRead *.hbs set ft=html
 au BufNewFile,BufRead *.babelrc set ft=javascript
 au BufNewFile,BufRead *.inky set ft=haml
+au BufNewFile,BufRead .env* set ft=conf
 au BufNewFile,BufRead *.java set noexpandtab
 
 au BufNewFile,BufRead *.markdown :setlocal spell spelllang=en_us
@@ -138,7 +146,7 @@ let g:firenvim_config = {
 lua << EOF
   require('telescope').setup{
     defaults = {
-      file_ignore_patterns = { "ios/*", "android/*" },
+      file_ignore_patterns = { "ios/*", "android/*", ".gradle/*", "node_modules/*", "yarn.lock" },
       history = {
         path = '~/.local/share/nvim/databases/telescope_history.sqlite3',
         limit = 100,
