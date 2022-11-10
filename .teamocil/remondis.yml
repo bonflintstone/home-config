@@ -1,12 +1,12 @@
-name: abb
+name: remondis
 windows:
-  - name: remondis frontend
-    root: ~/Projects/remondis/binity-app
-    layout: 'e7f4,166x49,0,0[166x35,0,0,18,166x13,0,36{82x13,0,36,20,41x13,83,36,21,41x13,125,36,22}]'
-    panes:
-      - vim
-      - ''
-      - yarn serve
+  # - name: remondis frontend
+  #   root: ~/Projects/remondis/binity-app
+  #   layout: 'e7f4,166x49,0,0[166x35,0,0,18,166x13,0,36{82x13,0,36,20,41x13,83,36,21,41x13,125,36,22}]'
+  #   panes:
+  #     - vim
+  #     - ''
+  #     - yarn serve
 
   - name: remondis backend
     root: ~/Projects/remondis/binity-api
@@ -20,3 +20,13 @@ windows:
       - commands:
         - cd ..
         - docker compose up
+
+          :ref="`stop${stop.position_type}${stop.uuid}`"
+          #
+  - name: binity-apk
+    root: ~/Projects/remondis/binity-apk
+    layout: 'e7f4,166x49,0,0[166x35,0,0,18,166x13,0,36{82x13,0,36,20,41x13,83,36,21,41x13,125,36,22}]'
+    panes:
+      - vim
+      - ''
+      - yarn serve
