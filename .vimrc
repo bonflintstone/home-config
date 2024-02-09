@@ -1,23 +1,28 @@
+:let $PATH = '/Users/bonflintstone/.local/share/nvm/v18.18.2/bin:' . $PATH
+
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 
+:silent exec "!nvm use 18"
+
 call plug#begin('~/.vim/plugged')
 " Syntax
-Plug 'posva/vim-vue'
-Plug 'wavded/vim-stylus'
-Plug 'elixir-lang/vim-elixir'
-Plug 'isRuslan/vim-es6'
-Plug 'zah/nim.vim'
-Plug 'dag/vim-fish'
-Plug 'ap/vim-css-color'
-Plug 'jeffkreeftmeijer/vim-dim'
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'slim-template/vim-slim'
-Plug 'dart-lang/dart-vim-plugin'
+" Plug 'posva/vim-vue'
+" Plug 'wavded/vim-stylus'
+" Plug 'elixir-lang/vim-elixir'
+" Plug 'isRuslan/vim-es6'
+" Plug 'zah/nim.vim'
+" Plug 'dag/vim-fish'
+" Plug 'jeffkreeftmeijer/vim-dim'
+" Plug 'leafgarland/typescript-vim'
+" Plug 'peitalin/vim-jsx-typescript'
+" Plug 'slim-template/vim-slim'
+" Plug 'dart-lang/dart-vim-plugin'
+" Plug 'othree/html5.vim'
 
 " Essential
+Plug 'ap/vim-css-color' " display colors
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'tami5/sql.nvim'
@@ -29,20 +34,16 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'airblade/vim-gitgutter' " git sidebar
 Plug 'tpope/vim-eunuch' " File command, renaming, deleting, etc
 Plug 'ryanoasis/vim-devicons' " Nice icons
-Plug 'ngmy/vim-rubocop'
-Plug 'airblade/vim-localorie' " yaml stuff
 Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-rails'
+Plug 'Exafunction/codeium.vim' " gh copilot alternative
+Plug 'prettier/vim-prettier'
+Plug 'wsdjeg/vim-fetch' " enables `:e filename:32`
 
 " Trying
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } } " Vim in the browser
-Plug 'jeetsukumaran/vim-indentwise'
-Plug 'prettier/vim-prettier'
-Plug 'othree/html5.vim'
-Plug 'dewyze/vim-ruby-block-helpers' " ruby block level navigation
-Plug 'yaegassy/coc-typeprof', { 'do': 'yarn install --frozen-lockfile' } 
-Plug 'pocke/rbs.vim'
+Plug 'sainnhe/sonokai' " colorscheme for treesitter
+Plug 'xiyaowong/transparent.nvim'
+Plug 'numToStr/Comment.nvim'
 
 call plug#end()
 
@@ -54,31 +55,22 @@ set backupcopy=yes
 set smartindent autoindent
 set undofile
 set tw=120
+set foldlevelstart=20
 
 syntax on
-" colo dim
+colo sonokai
 let g:netrw_banner = 0
 
 let mapleader = ' '
-nnoremap <leader>e :e %:p:h
+nnoremap <leader>e :Explore
 nnoremap <leader>q :q
 nnoremap <leader>w :w
 nnoremap <leader>n :noh
-nnoremap <leader>f :CocFix
 nnoremap  <cmd>lua require('telescope.builtin').find_files({ hidden = true, no_ignore = false })<cr>
 nnoremap <leader>/ <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>* yiw<cmd>lua require('telescope.builtin').live_grep()<cr><cmd><cr>"
 nnoremap <leader>g yiw<cmd>lua require('telescope').extensions.gh.pull_request()<cr>
-nnoremap <leader>a :CocAction
-nnoremap <leader>c :CocCommand
-nnoremap <leader>s yiw:grep " app/**/*
-nnoremap <leader>sa yiw:grep " **/*
 nnoremap <leader>f :call CocActionAsync('format')<cr>
-nnoremap <leader>r :RuboCop
-nnoremap <leader>ra :RuboCop -A
-nnoremap <leader>rr :RuboCop .
-nnoremap <leader>rra :RuboCop -A .
-nnoremap <leader>t :call localorie#translate()<cr>
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
@@ -88,6 +80,7 @@ nmap <silent> <UP> :copen<CR>
 nmap <silent> <DOWN> :cclose<CR>
 " copy current file path with 'cp'
 nmap <silent> cp :let @+ = expand("%")<CR>
+nmap <silent> cpp :let @+ = expand("%") .. ':' .. line('.')<CR>
 
 " Best silver searcher setup
 if executable('ag') 
@@ -109,6 +102,7 @@ au BufNewFile,BufRead .env* set ft=conf
 au BufNewFile,BufRead *.java set noexpandtab
 
 au BufNewFile,BufRead *.markdown :setlocal spell spelllang=en_us
+au BufNewFile,BufRead *.md :setlocal spell spelllang=en_us
 au BufNewFile,BufRead *.help :setlocal spell spelllang=en_us
 au BufNewFile,BufRead *.txt :setlocal spell spelllang=en_us
 
@@ -117,31 +111,12 @@ imap kj <Esc>
 
 let g:gitgutter_sign_column_always = 1
 
-highlight Search cterm=underline
-highlight GitGutterAdd    ctermfg=2
-highlight GitGutterChange ctermfg=3
-highlight GitGutterDelete ctermfg=1
-highlight SignColumn ctermbg=none
-
-autocmd CursorMoved *.yml echo localorie#expand_key()
-
-let g:vimrubocop_rubocop_cmd = 'bundle exec rubocop '
-
-set guifont=Fira_Code:h22 " for firenvim
-let g:firenvim_config = {
-    \ 'globalSettings': {
-        \ 'alt': 'all',
-    \  },
-    \ 'localSettings': {
-        \ '.*': {
-            \ 'cmdline': 'neovim',
-            \ 'content': 'text',
-            \ 'priority': 0,
-            \ 'selector': 'textarea',
-            \ 'takeover': 'never',
-        \ },
-    \ }
-    \ }
+hi Search cterm=underline
+hi GitGutterAdd    ctermfg=2
+hi GitGutterChange ctermfg=3
+hi GitGutterDelete ctermfg=1
+hi SignColumn ctermbg=none
+hi TelescopeNormal guibg=#111111
 
 lua << EOF
   require('telescope').setup{
@@ -163,4 +138,45 @@ lua << EOF
   }
 
   require('telescope').load_extension('smart_history')
+
+  require('Comment').setup()
+
+  require("nvim-treesitter.configs").setup({
+    highlight = {
+      enable = true,
+    },
+    -- enable indentation
+    indent = { enable = true },
+
+    ensure_installed = {
+      "bash",
+      "css",
+      "dockerfile",
+      "gitignore",
+      "graphql",
+      "html",
+      "javascript",
+      "json",
+      "lua",
+      "markdown",
+      "markdown_inline",
+      "prisma",
+      "query",
+      "ruby",
+      "svelte",
+      "tsx",
+      "typescript",
+      "vim",
+      "yaml",
+    },
+    incremental_selection = {
+      enable = true,
+      keymaps = {
+        init_selection = " v",
+        node_incremental = " v",
+        scope_incremental = false,
+        node_decremental = " b",
+      },
+     },
+  })
 EOF
