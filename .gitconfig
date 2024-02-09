@@ -5,6 +5,7 @@
 [core]
 	autocrlf = false
 	excludesFile = ~/.global-gitignore
+  pager = bat
 [push]
 	default = simple
 [commit]
