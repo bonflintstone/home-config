@@ -9,6 +9,7 @@
 
 !.config
 !.config/*
+.config/fish/fish_variables
 
 !.teamocil/
 !.teamocil/*

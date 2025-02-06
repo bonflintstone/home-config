@@ -7,20 +7,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 :silent exec "!nvm use 18"
 
 call plug#begin('~/.vim/plugged')
-" Syntax
-" Plug 'posva/vim-vue'
-" Plug 'wavded/vim-stylus'
-" Plug 'elixir-lang/vim-elixir'
-" Plug 'isRuslan/vim-es6'
-" Plug 'zah/nim.vim'
-" Plug 'dag/vim-fish'
-" Plug 'jeffkreeftmeijer/vim-dim'
-" Plug 'leafgarland/typescript-vim'
-" Plug 'peitalin/vim-jsx-typescript'
-" Plug 'slim-template/vim-slim'
-" Plug 'dart-lang/dart-vim-plugin'
-" Plug 'othree/html5.vim'
-
 " Essential
 Plug 'ap/vim-css-color' " display colors
 Plug 'nvim-lua/popup.nvim'
@@ -38,12 +24,14 @@ Plug 'tpope/vim-abolish'
 Plug 'Exafunction/codeium.vim' " gh copilot alternative
 Plug 'prettier/vim-prettier'
 Plug 'wsdjeg/vim-fetch' " enables `:e filename:32`
-
-" Trying
+Plug 'tpope/vim-rails' " 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'sainnhe/sonokai' " colorscheme for treesitter
+
+" Trying
 Plug 'xiyaowong/transparent.nvim'
 Plug 'numToStr/Comment.nvim'
+Plug 'vuki656/package-info.nvim'
 
 call plug#end()
 
@@ -52,7 +40,7 @@ set noswapfile
 set ignorecase smartcase
 set mouse=a
 set backupcopy=yes
-set smartindent autoindent
+set autoindent
 set undofile
 set tw=120
 set foldlevelstart=20
@@ -62,7 +50,7 @@ colo sonokai
 let g:netrw_banner = 0
 
 let mapleader = ' '
-nnoremap <leader>e :Explore
+nnoremap <leader>e :e %:p:h
 nnoremap <leader>q :q
 nnoremap <leader>w :w
 nnoremap <leader>n :noh
@@ -120,6 +108,9 @@ hi TelescopeNormal guibg=#111111
 
 lua << EOF
   require('telescope').setup{
+    extensions = {
+        package_info = { theme = "ivy" }
+    },
     defaults = {
       file_ignore_patterns = { "ios/*", "android/*", ".gradle/*", "node_modules/*", "yarn.lock" },
       history = {
@@ -139,18 +130,19 @@ lua << EOF
 
   require('telescope').load_extension('smart_history')
 
+  require("telescope").load_extension("package_info")
+
   require('Comment').setup()
 
+  require('package-info').setup()
+
   require("nvim-treesitter.configs").setup({
-    highlight = {
-      enable = true,
-    },
-    -- enable indentation
-    indent = { enable = true },
+    highlight = { enable = true },
 
     ensure_installed = {
       "bash",
       "css",
+      "scss",
       "dockerfile",
       "gitignore",
       "graphql",
@@ -167,6 +159,7 @@ lua << EOF
       "tsx",
       "typescript",
       "vim",
+      "vue",
       "yaml",
     },
     incremental_selection = {
