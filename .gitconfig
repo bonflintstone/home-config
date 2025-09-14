@@ -1,6 +1,6 @@
 [user]
 	name = Bonflintstone
-	email = freddy@railslove.com
+	email = me@bonflintstone.com
 	signingkey = CC7B757DAECBB941
 [core]
 	autocrlf = false
@@ -8,7 +8,31 @@
   pager = bat
 [push]
 	default = simple
+	autoSetupRemote = true
+	followTags = true
 [commit]
 	gpgsign = true
+	verbose = true
 [init]
 	defaultBranch = main
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[tag]
+	sort = version:refname
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = false
+[help]
+	autocorrect = prompt
+[pull]
+	rebase = true
+[rebase]
+	autostash = true

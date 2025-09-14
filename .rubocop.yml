@@ -4,14 +4,14 @@ AllCops:
     - features/**/*
     - '**/migrations/**'
     - bin/**/*
-Rails:
-  Enabled: true
 LineLength:
-  Max: 100
+  Max: 160
   Enabled: true
 StringLiterals:
   Enabled: false
 Documentation:
   Enabled: false
 Style/FrozenStringLiteralComment:
+  Enabled: false
+Metrics:
   Enabled: false
